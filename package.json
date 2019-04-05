@@ -1,6 +1,20 @@
 {
-  "name": "software-products",
-  "version": "0.1.0",
+  "name": "software-karpolan-com",
+  "version": "0.1.1",
+  "description": "Web application for software.karpolan.com",
+  "keywords": [
+    "react",
+    "website",
+    "software",
+    "product",
+    "karpolan"
+  ],
+  "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
+  "homepage": "https://software.karpolan.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karpolan/software-karpolan-com"
+  },
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
