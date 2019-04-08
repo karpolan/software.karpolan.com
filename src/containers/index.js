@@ -1,10 +1,11 @@
 import DefaulContainer from './DefaultContainer';
 import NotFound from './NotFound/NotFound';
-import MdbContactForm from './Contact/Contact';
+import Contact from './Contact/Contact';
+import About from './About/About';
 
 export {
 	DefaulContainer as ProductList,
-	DefaulContainer as About,
-	MdbContactForm as Contact,
+	About,
+	Contact,
 	NotFound,
 }
