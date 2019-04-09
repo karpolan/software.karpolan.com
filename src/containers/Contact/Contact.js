@@ -4,17 +4,17 @@ import { SocialList, ContactForm } from '../../components';
 
 class Contact extends Component {
 	PropTypes = {
-		
+		className: PropTypes.string,
 	};
 
 	render() {
 		return (
-			<article className="contact">
+			<article className={`contact py-3 ${this.props.className}`}>
 
-				<div className="row pt-3">
-
-					Feel free to ask me any questions about software development, information technologies or online business.
-
+				<div className="row">
+					<div className="col-12">
+						Feel free to ask me any questions about software development, information technologies or online business.
+					</div>
 				</div>
 
 				<div className="row">
@@ -24,10 +24,12 @@ class Contact extends Component {
 				</div>
 
 				<div className="row">
-					<p>
-						We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b> everywhere. 
-					</p>	
-					<SocialList />
+					<div className="col-12">
+						<p>
+							We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b> everywhere. 
+						</p>	
+						<SocialList />
+					</div>
 				</div>
 
 			</article>

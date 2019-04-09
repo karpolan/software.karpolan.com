@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 //import {Helmet} from "react-helmet";
-import BootstrapContactForm from './BootstrapContactForm';
+//import BootstrapContactForm from './BootstrapContactForm';
+import RbContactForm from './RbContactForm';
 
 /**
  * Contact Form. Injects 3rd party scripts and can send email.
@@ -100,7 +101,7 @@ class ContactForm extends Component {
 		//const {name, email, message} = this.state;
 		return(
 			<React.Fragment>
-				<BootstrapContactForm onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} {...this.state} />
+				<RbContactForm onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} {...this.state} />
 			</React.Fragment>
 		);
 	}

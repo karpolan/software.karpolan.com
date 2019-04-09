@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Consts } from '../../storage';
 
 /**
  * Footer shows different content depending on screen size. 
  */
-function content(props) {
+
+const content = (props) => {
 	const { className = '', forceShow = false} = props;
 
 	const name = props.name || Consts.name;    //  'Anton Karpenko';
@@ -23,8 +25,8 @@ function content(props) {
 
 					<div className={`col-md-2 ${classShowHideMd}`}>
 						<ul className="list-unstyled">
+							<li className=""><Link to="/" title={'Software created by ' + name}>Software</Link></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://websites.karpolan.com" title={'Websites created by ' + name}>Websites</a></li>
-							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://software.karpolan.com" title={'Software created by ' + name}>Software</a></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://software.karpolan.com" title={'Services created by ' + name}>Services</a></li>
 						</ul>
 					</div>

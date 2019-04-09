@@ -23,8 +23,8 @@ class About extends Component {
 		const phone = this.props.phone || Consts.phone; //  '+38 093 394-48-15';
 
 		return (
-			<article className={`about ${this.props.className}`}>
-				<div className="row pt-3">
+			<article className={`about py-3 ${this.props.className}`}>
+				<div className="row">
 
 					<div className="col-md-6 text-center">
 						<section className="photo">
