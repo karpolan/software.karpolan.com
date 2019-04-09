@@ -1,0 +1,10 @@
+export const name = 'Anton Karpenko';
+export const email = 'i@karpolan.com';
+export const phone = '+38 093 394-48-15';
+export const linkedin = 'https://www.linkedin.com/in/karpolan/';
+export const facebook = 'https://www.facebook.com/KarpolanOfficial/';
+export const twitter = 'https://twitter.com/karpolan';
+export const youtube = 'https://www.youtube.com/user/karpolan';
+export const instagram = 'https://www.instagram.com/karpolan/';
+export const github = 'https://github.com/karpolan';
+export const slideshare = 'https://www.slideshare.net/karpolan/';

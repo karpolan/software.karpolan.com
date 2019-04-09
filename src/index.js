@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 import DefaultRouter from './router/';
-import { Header, Footer } from './components';
+import { Header, Footer, Content } from './components';
 
 //import './bootstrap.scss';
 //import 'bootstrap/dist/css/bootstrap.css';
@@ -19,7 +19,9 @@ import './social-colors.css';
 const app = (
 	<Router>
 		<Header />
-		<DefaultRouter />
+		<Content>
+			<DefaultRouter />
+		</Content>
 		<Footer />
 	</Router>
 );

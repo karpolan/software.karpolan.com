@@ -1,8 +1,11 @@
 import DefaultComponent from './DefaultComponent';
+import Content from './Content/Content';
+import Footer from './Footer/Footer';
 
 export {
 	DefaultComponent as Header,
-	DefaultComponent as Footer,
+	Footer,
+	Content,
 	DefaultComponent as Sidebar,
 	DefaultComponent
 }

@@ -7,6 +7,7 @@ https://www.materialui.co/socialcolors
 /* https://en.facebookbrand.com/#brand-guidelines-assets */
 .fa-facebook, 
 .fa-facebook-square, 
+.fa-facebook-f,
 .facebook-color {
 	color: #3b5999;
 	color: #365998;
@@ -17,6 +18,7 @@ https://www.materialui.co/socialcolors
 /* https://brand.linkedin.com/visual-identity/color-palettes */
 .fa-linkedin, 
 .fa-linkedin-square,
+.fa-linkedin-in,
 .linkedin-color {
 	color: #007bb5;
 	color: #00a0dc;
