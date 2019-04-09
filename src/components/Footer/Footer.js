@@ -6,7 +6,6 @@ import { Consts } from '../../storage';
 /**
  * Footer shows different content depending on screen size. 
  */
-
 const content = (props) => {
 	const { className = '', forceShow = false} = props;
 

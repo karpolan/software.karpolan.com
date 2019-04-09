@@ -12,7 +12,7 @@ const rbHeader = (props) => {
 		<header className={`header ${props.className}`}>
 
 			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-				<Navbar.Brand as={Link} to="/">Software</Navbar.Brand>
+				<Navbar.Brand as={Link} to="/">Software by KARPOLAN</Navbar.Brand>
 
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">

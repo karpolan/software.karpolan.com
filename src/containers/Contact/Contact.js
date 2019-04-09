@@ -9,7 +9,7 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<article className={`contact py-3 ${this.props.className}`}>
+			<article className={`contact ${this.props.className}`}>
 
 				<div className="row">
 					<div className="col-12">
