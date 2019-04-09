@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function content(props) {
 	const { className = '', children} = props;
  	return (
-		<div className={`container mb-3 ${className}`}>
+		<div className={`container bg-secondary ${className}`}>
 			{children}	
 		</div>
 	)
