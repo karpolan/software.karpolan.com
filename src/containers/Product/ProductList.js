@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import { Card, CardColumns } from 'react-bootstrap';
 import { ProductCard } from '../../components';
 
-export class SoftwareList extends Component {
+export class ProductList extends Component {
 	static propTypes = {
 		className: PropTypes.string,
 	}
 
 	render() {
 		return (
-			<article className={`software-list ${this.props.className}`}>
+			<article className={`product-list ${this.props.className}`}>
 
 				<CardColumns>
 
 					<ProductCard 
-						title="Title"
-						text="Text Text Text Text Text Text Text Text Text Text Text Text "
-
+						name="Auto Mute"		
+						icon="https://auto-mute.com/images/icon-256x256.png"					
+						text="Small software utility to make PC or MAC silent when it's turning on or is waking up. The sound is automatically muted when the computer is turning off or is going to suspend mode. The next system start is absolutely silent even if you forgot to turn the sound off in previous session. After that you can enable sound effects manually, using a shortcut combination. Moreover, you may use this keyboard shortcut to quickly switch the sound on and off."
+						link="/product/1"
 					/>
 
 
@@ -163,4 +164,4 @@ export class SoftwareList extends Component {
 	}
 }
 
-export default SoftwareList;
+export default ProductList;

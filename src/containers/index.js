@@ -2,10 +2,12 @@ import DefaulContainer from './DefaultContainer';
 import NotFound from './NotFound/NotFound';
 import Contact from './Contact/Contact';
 import About from './About/About';
-import SoftwareList from './Software/SoftwareList';
+import Product from './Product/Product';
+import ProductList from './Product/ProductList';
 
 export {
-	SoftwareList as ProductList,
+	Product,
+	ProductList,
 	About,
 	Contact,
 	NotFound,
