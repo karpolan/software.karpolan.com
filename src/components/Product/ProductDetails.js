@@ -14,8 +14,8 @@ const prouductDetails = (props) => {
 		if (!Array.isArray(images) || images.length < 1) return null;
 
 		const renderItems = images.map((item, index) => (
-			<Carousel.Item>
-				<Image key={index} className="d-block mx-auto" src={item} />
+			<Carousel.Item key={index}>
+				<Image className="d-block mx-auto" src={item} />
 			</Carousel.Item>
 		));
 

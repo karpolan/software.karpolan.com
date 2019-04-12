@@ -1,0 +1,62 @@
+{
+	"@context": "http://schema.org",
+	"@type": "Product",
+	
+
+	"name": "oChePyaTka",
+	"description": "Using Ochepyatka you can convert text between different keyboard layouts within a second! Just select an incorrect text fragment and press appropriate keyboard shortcut - the program will make some magic and fix your text immediately!",
+	"url": "https://ochepyatka.com",
+	"image": [
+		"https://ochepyatka.com/images/icon-256x256.png",
+		"https://ochepyatka.com/images/screenshot.png"
+	],
+	"category": "Software",
+	"mpn": "2",
+	"sku": "ocp1x",
+			
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5.0",
+		"ratingCount": "65535"
+	},
+ 	
+	"brand": {
+		"@type": "Organization",
+		"url": "https://karpolan.com",
+		"email": "software@karpolan.com",
+		"name": "KARPOLAN"
+	},
+
+	"offers": [
+		{
+			"@type": "Offer",
+			"name" : "Download",
+			"url": "https://ochepyatka.com/download/",
+			"seller": {
+				"@type": "Organization",
+				"url": "https://ochepyatka.com",
+				"name": "OCHEPYATKA.COM"
+			},
+			"availability": "OnlineOnly",
+			"priceCurrency": "USD",
+			"price": "0"
+		},
+		{
+			"@type": "Offer",
+			"name" : "Download for PC",
+			"url": "https://ochepyatka.com/download/",
+			"itemOffered": {
+				"@type": "SoftwareApplication",
+				"applicationCategory": "UtilitiesApplication",
+				"operatingSystem": "Windows",
+				"screenshot": "https://ochepyatka.com/images/screenshot.png",
+				"downloadUrl": "https://ochepyatka.com/files/ochepyatka-setup.exe",
+				"url": "https://ochepyatka.com",
+				"name": "oChePyaTka for PC"
+			},
+			"availability": "OnlineOnly",
+			"priceCurrency": "USD",
+			"price": "0"
+		}
+	]
+}

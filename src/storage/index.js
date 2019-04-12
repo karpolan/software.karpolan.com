@@ -1,5 +1,7 @@
 import * as Consts from './consts';
+import * as Data from './data';
 
 export {
-	Consts
+	Data,
+	Consts,
 }

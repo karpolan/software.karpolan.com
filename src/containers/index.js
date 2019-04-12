@@ -11,4 +11,5 @@ export {
 	About,
 	Contact,
 	NotFound,
+	DefaulContainer
 }
