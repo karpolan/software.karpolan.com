@@ -1,6 +1,6 @@
 # software.karpolan.com
 
-Web application for list of [software product](http://software.karpolan.com) created by Anton Karpenko aka [KARPOLAN](http://karpolan.com).
+Web application for list of [software products](http://software.karpolan.com) created by Anton Karpenko aka [KARPOLAN](http://karpolan.com).
 
 
 ## Available Scripts
