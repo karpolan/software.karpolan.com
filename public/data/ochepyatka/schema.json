@@ -4,7 +4,7 @@
 	
 
 	"name": "oChePyaTka",
-	"description": "Using Ochepyatka you can convert text between different keyboard layouts within a second! Just select an incorrect text fragment and press appropriate keyboard shortcut - the program will make some magic and fix your text immediately!",
+	"description": "Using Ochepyatka you can convert text between different keyboard layouts within a second! Just select an incorrect text fragment and press appropriate keyboard shortcut - the program will make some magic and fix your text immediately! Ochepytka can convert: \"hELLO wORLD\" into \"Hello World\". Cool, isn't it?",
 	"url": "https://ochepyatka.com",
 	"image": [
 		"https://ochepyatka.com/images/icon-256x256.png",
@@ -44,7 +44,7 @@
 		{
 			"@type": "Offer",
 			"name" : "Download for PC",
-			"url": "https://ochepyatka.com/download/",
+			"url": "https://ochepyatka.com/files/ochepyatka-setup.exe",
 			"itemOffered": {
 				"@type": "SoftwareApplication",
 				"applicationCategory": "UtilitiesApplication",

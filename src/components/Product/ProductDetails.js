@@ -1,25 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Image, Carousel, Container, Col, Row } from 'react-bootstrap';
+import { Image, Carousel, Container, Col, Row, Button, ButtonToolbar } from 'react-bootstrap';
+import './Product.css';
 
 /**
  * Renders Product Details page using props as data
  */
 const prouductDetails = (props) => {
-	const { name, text, icon, images } = props;
+	const { name, text, icon, images, offers } = props;
 	//	const contentLinks = (links) ? links.map((link, index) => <Card.Link key={index} as={Link} to={link.url}>{link.text}</Card.Link>) : null;
 
-	const renderImages = (images) => {
+	const renderImages = () => {
 		if (!Array.isArray(images) || images.length < 1) return null;
 
-		const renderItems = images.map((item, index) => (
+		const list = images.map((item, index) => (
 			<Carousel.Item key={index}>
-				<Image className="d-block mx-auto" src={item} />
+				<Image className="product-image" src={item} />
 			</Carousel.Item>
 		));
 
-		return <Carousel>{renderItems}</Carousel>;
+		return <Carousel indicators={false} interval={3000}>{list}</Carousel>;
+	}
+
+	const renderOffers = () => {
+		if (!Array.isArray(offers) || offers.length < 1) return null;
+
+		const BUTTON_VARIANTS = [
+			"outline-primary",
+//			"outline-secondary",
+			"outline-success",
+			"outline-warning",
+			"outline-danger",
+			"outline-info",
+		];
+
+		const list = offers.map((item, index) => (
+			<Button key={index} className="product-button" 
+				variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]} 
+				href={item.url} 
+				target="_blank" rel="noopener noreferrer"
+			>{item.name}</Button>
+		));
+
+		return <ButtonToolbar>{list}</ButtonToolbar>;
 	}
 
 	return (
@@ -31,18 +54,18 @@ const prouductDetails = (props) => {
 				</Row>
 				<Row>
 					<Col className="text">
-						<Image className="float-left mr-2" src={icon} width="64" height="64" />
+						<Image className="product-icon" src={icon} />
 						{text}
 					</Col>
 				</Row>
 				<Row>
 					<Col className="images">
-						{renderImages(images)}
+						{renderImages()}
 					</Col>
 				</Row>
 				<Row>
 					<Col className="buttons">
-						[buttons and other actions here]
+						{renderOffers()}
 					</Col>
 				</Row>
 			</Container>
@@ -56,6 +79,7 @@ prouductDetails.propTypes = {
 	icon: PropTypes.string.isRequired,
 	text: PropTypes.string.isRequired,
 	images: PropTypes.array,
+	offers: PropTypes.array,
 }
 
 export default prouductDetails;

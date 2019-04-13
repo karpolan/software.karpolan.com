@@ -42,7 +42,7 @@ const content = (props) => {
 						<ul className="list-unstyled">
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.com" title={'Books by ' + name}>Books</a></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.blogspot.com" title={'Articles by ' + name}>Articles</a></li>
-							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.blogspot.com" title={'Blog by ' + name}>Blog</a></li>
+							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://blog.karpolan.com" title={'Blog by ' + name}>Blog</a></li>
 						</ul>
 					</div>
 

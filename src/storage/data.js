@@ -1,8 +1,12 @@
+import { shuffle } from '../utils';
 
 export const getAllData = (callback, property = 'data') => {
   fetch('/data/all.json')
     .then(response => response.json())
     .then(data => {
+  		// Shuffle the list of products
+			shuffle(data);
+      // Call data setting callback
       callback({ [property]: data });
     });
 }

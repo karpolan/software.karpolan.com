@@ -47,7 +47,7 @@
 		{
 			"@type": "Offer",
 			"name" : "Download for PC",
-			"url": "https://auto-mute.com/download/",
+			"url": "https://auto-mute.com/files/auto-mute.exe",
 			"itemOffered": {
 				"@type": "SoftwareApplication",
 				"applicationCategory": "UtilitiesApplication",
@@ -64,7 +64,7 @@
 		{
 			"@type": "Offer",
 			"name" : "Download for MAC",
-			"url": "https://auto-mute.com/download/",
+			"url": "https://auto-mute.com/files/auto-mute.dmg",
 			"itemOffered": {
 				"@type": "SoftwareApplication",
 				"applicationCategory": "UtilitiesApplication",

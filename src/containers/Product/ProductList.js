@@ -5,7 +5,7 @@ import { ProductCard } from '../../components';
 import { Data } from '../../storage';
 
 /**
- * Renders list of all products
+ * Renders list of all products from "/data/" folder
  */
 export class ProductList extends Component {
 	static propTypes = {

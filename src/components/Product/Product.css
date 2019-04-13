@@ -1,0 +1,28 @@
+.card-title a:hover,
+.card-title a {
+	color: inherit;
+}
+
+.product-image,
+.images img,
+.carousel-item img {
+	height: 320px;
+	margin: 1em auto;
+	display: block;
+}
+
+.product-icon {
+	width: 64px;
+	height: 64px;
+	float: left;
+	margin-right: 0.5em;
+}
+
+.buttons .btn-toolbar {
+	justify-content: center;
+}
+
+.buttons .btn,
+.product-button {
+	margin: 0.5em;
+}

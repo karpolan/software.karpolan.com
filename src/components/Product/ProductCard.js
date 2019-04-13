@@ -22,11 +22,11 @@ const productCard = (props) => {
 				{contentImg}
 				{contentHeader}
 				<Card.Body>
-					<Card.Title>{name}</Card.Title>
+					<Card.Title><Link to={link}>{name}</Link></Card.Title>
 					{contentSubTitle}
 					<Card.Text>
 						<Link to={link}>
-							<Image className="float-left mr-2" src={icon} width="64" height="64" />
+							<Image className="product-icon" src={icon}/>
 						</Link>
 						{text}
 					</Card.Text>
