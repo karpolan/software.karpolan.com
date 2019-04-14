@@ -70,7 +70,6 @@ glob('**/index.html', {}, function (err, files) {
 		}
 	}); // files.map()
 
-
 	// Write "index.html"
 	const htmlContent = `<!DOCTYPE html>
 <html lang="en">
@@ -95,6 +94,7 @@ ${htmlItems.join('\n')}
 	// Write "sitemap.xml"
 	const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://software.karpolan.com/data/</loc><priority>0.6</priority></url>
 ${xmlItems.join('\n')}
 </urlset>`
 	fs.writeFile('sitemap.xml', xmlContent, function(err) {

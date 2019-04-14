@@ -10,9 +10,11 @@
 
 # production
 /build
+public.zip
 
 # misc
 *.zip
+public.zip
 .vscode
 .DS_Store
 .env.local
