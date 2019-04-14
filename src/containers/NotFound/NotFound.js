@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NotFound.css';
 
+/**
+ * Renders 404 error page
+ */
 function notFound() {
 	return (
 		<div className="not-found">
@@ -14,11 +17,11 @@ function notFound() {
 							Sorry, an error has occured. Requested page not found!
 						</div>
 						<div className="error-actions">
-							<Link className="btn btn-primary btn-lg" to="/">
+							<Link className="btn btn-primary" to="/">
 								<span className="glyphicon glyphicon-home"></span>
 								<span>Take Me Home</span>
 							</Link>
-							<Link className="btn btn-secondary btn-lg" to="/contact/">
+							<Link className="btn btn-outline-secondary" to="/contact/">
 								<span className="glyphicon glyphicon-envelope"></span>
 								<span>Contact Support</span>
 							</Link>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1 id="name"></h1>
+	<div>
+		<p id="desc"></p>
+		<a id="link"></a>
+	</div>
+	
+	<script type="text/javascript">	
+		function loadJsonFile(fileName = './schema.json') {
+			return fetch(fileName, {credentials: 'same-origin'})
+				.then( function (response) {
+					if (!response.ok) {
+					   throw new Error("HTTP error " + response.status);
+					}
+					return response.json();
+				})
+				.then( function (json) {
+					return json;
+				})
+				.catch( function (error) {
+					console.error('loadJsonFile(%s) failed, Error: %s', fileName, error.message);
+					return null;
+				});
+		}; // loadJsonFile()
+
+		loadJsonFile('./schema.json').then( function (json) { 
+			console.log('JSON:', json);
+			if (json) {
+				// Add <script type="application/ld+json"> with json data
+				var script = document.createElement('script');
+				script.type = 'application/ld+json';
+				script.innerHTML = JSON.stringify(json);
+				document.getElementsByTagName('head')[0].appendChild(script); 
+
+				// Populate DOM elements
+				document.title = json['name'];	
+				document.getElementById('name').innerHTML = json['name'];
+				document.getElementById('desc').innerHTML = json['description'];
+				var link = document.getElementById('link');
+				if (link) {
+					link.href = json['url'];
+					link.innerHTML = 'More about ' + json['name'];
+				}	
+			}	
+		});	
+	</script>	
+</body>
+</html>
+

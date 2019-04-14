@@ -2,7 +2,6 @@
 	"@context": "http://schema.org",
 	"@type": "Product",
 	
-
 	"name": "Touchpad Blocker",
 	"description": "Touchpad is very useful device, but it's usually located right under your hands when you are typing. Accidental touch by palm moves caret to another place of text! That's why Touchpad Blocker is a must have software for notebook owners who prefer to use touchpad instead of mouse or other pointing devices. Software helps the user to type text as fast as possible by locking mouse events during a small period after any key were pressed.",
 	"url": "https://touchpad-blocker.com",
@@ -11,7 +10,7 @@
 		"https://touchpad-blocker.com/images/screenshot.png"
 	],
 	"category": "Software",
-	"mpn": "2",
+	"mpn": "8",
 	"sku": "tb2x",
 			
 	"aggregateRating": {

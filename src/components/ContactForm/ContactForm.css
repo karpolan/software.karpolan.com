@@ -1,0 +1,9 @@
+.form-label {
+	font-weight: bold;
+}
+
+@media (min-width: 768px) { 
+	.form-label {
+		text-align: right;
+	}	
+}

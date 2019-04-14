@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from "react-router-dom";
 import { CardColumns } from 'react-bootstrap';
-import { ProductCard } from '../../components';
+import { ProductCard, Spinner } from '../../components';
 import { Data } from '../../storage';
 
 /**
@@ -12,7 +13,13 @@ export class ProductList extends Component {
 		className: PropTypes.string,
 	}
 
+	static defaultProps = {
+		className: '',
+	}
+
 	state = {
+		error: false,
+		loaded: false,
 		data: {}
 	}
 
@@ -22,14 +29,19 @@ export class ProductList extends Component {
 	}
 
 	render() {
+		// Redirect to NotFound if data loading have been failed
+		if (this.state.error === true) return <Redirect to="/404" />;
+
+		// Show only Spinner if data was not loaded yet
+		if (this.state.loaded === false) return <Spinner />;
 
 		const renderCards = (productList) => {
-			if (!Array.isArray(productList)) return null;
+			if (!Array.isArray(productList) || productList.length < 1) return null;
 
 			const cards = productList.map((p, index) => {
 				let icon = p.schema.image;
 				if (Array.isArray(icon)) icon = icon[0]; // Use first image as icon
-				return <ProductCard key={index} name={p.schema.name} text={p.schema.description} icon={icon} link={`/product/${p.id}`} />;
+				return <ProductCard key={index} name={p.schema.name} text={p.schema.description} icon={icon} link={`/${p.id}`} />;
 			})
 			return cards;
 		}; // renderCards()

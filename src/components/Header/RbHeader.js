@@ -7,9 +7,9 @@ import { Nav, Navbar } from 'react-bootstrap';
  * Header with Navbar using React-Bootstrap https://react-bootstrap.github.io
  * Also see: https://stackoverflow.com/questions/35687353/react-bootstrap-link-item-in-a-navitem
  */
-const rbHeader = (props) => {
+const rbHeader = ({className = ''}) => {
 	return (
-		<header className={`header ${props.className}`}>
+		<header className={`header ${className}`}>
 
 			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 				<Navbar.Brand as={Link} to="/">Software by KARPOLAN</Navbar.Brand>

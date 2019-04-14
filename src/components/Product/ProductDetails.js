@@ -10,6 +10,9 @@ const prouductDetails = (props) => {
 	const { name, text, icon, images, offers } = props;
 	//	const contentLinks = (links) ? links.map((link, index) => <Card.Link key={index} as={Link} to={link.url}>{link.text}</Card.Link>) : null;
 
+	/**
+	 * Renders all images as Carousel
+	 */
 	const renderImages = () => {
 		if (!Array.isArray(images) || images.length < 1) return null;
 
@@ -20,14 +23,17 @@ const prouductDetails = (props) => {
 		));
 
 		return <Carousel indicators={false} interval={3000}>{list}</Carousel>;
-	}
+	} // renderImages()
 
+	/**
+	 * Renders all offers as Buttons
+	 */
 	const renderOffers = () => {
 		if (!Array.isArray(offers) || offers.length < 1) return null;
 
 		const BUTTON_VARIANTS = [
 			"outline-primary",
-//			"outline-secondary",
+			//			"outline-secondary",
 			"outline-success",
 			"outline-warning",
 			"outline-danger",
@@ -35,15 +41,15 @@ const prouductDetails = (props) => {
 		];
 
 		const list = offers.map((item, index) => (
-			<Button key={index} className="product-button" 
-				variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]} 
-				href={item.url} 
+			<Button key={index} className="product-button"
+				variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]}
+				href={item.url}
 				target="_blank" rel="noopener noreferrer"
 			>{item.name}</Button>
 		));
 
 		return <ButtonToolbar>{list}</ButtonToolbar>;
-	}
+	} // renderOffers()
 
 	return (
 		<React.Fragment>
@@ -71,7 +77,7 @@ const prouductDetails = (props) => {
 			</Container>
 
 		</React.Fragment>
-	)
+	);
 }
 
 prouductDetails.propTypes = {

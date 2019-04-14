@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ProductDetails } from '../../components';
+import { Redirect } from "react-router-dom";
+import { ProductDetails, Spinner } from '../../components';
 import { Data } from '../../storage';
 
 /**
@@ -11,7 +12,13 @@ export class Product extends Component {
 		className: PropTypes.string,
 	}
 
+	static defaultProps = {
+		className: ''
+	}
+
 	state = {
+		error: false,
+		loaded: false,
 		id: '',
 		data: {
 			name: '',
@@ -27,6 +34,12 @@ export class Product extends Component {
 	}
 
 	render() {
+		// Redirect to NotFound if data loading have been failed
+		if (this.state.error === true) return <Redirect to="/404" />;
+
+		// Show only Spinner if data was not loaded yet
+		if (this.state.loaded === false) return <Spinner />;
+
 		let icon = this.state.data.image;
 		if (Array.isArray(icon)) icon = icon[0]; // Use first image as icon
 		const productData = {

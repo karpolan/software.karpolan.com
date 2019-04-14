@@ -2,7 +2,6 @@
 	"@context": "http://schema.org",
 	"@type": "Product",
 	
-
 	"name": "Keyboard LEDs",
 	"description": "Lots of notebooks, netbooks and cordless keyboards have no indicators for Caps Lock, and Num Lock. Scroll Lock's bulb disappeared almost from any hardware for now. Keyboard Leds software solves this problem. The program lets you know the current state of keyboard locks. You can see the status either on a small icon in the system tray or on a floating OSD window.",
 	"url": "https://keyboard-leds.com",
@@ -11,7 +10,7 @@
 		"https://keyboard-leds.com/images/screenshot.png"
 	],
 	"category": "Software",
-	"mpn": "1",
+	"mpn": "3",
 	"sku": "kb2x",
 			
 	"aggregateRating": {

@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 //import {Helmet} from "react-helmet";
 //import BootstrapContactForm from './BootstrapContactForm';
 import RbContactForm from './RbContactForm';
+import './ContactForm.css';
 
 /**
  * Contact Form. Injects 3rd party scripts and can send email.
  */
 class ContactForm extends Component {
-	PropTypes = {
+	static propTypes = {
 		name: PropTypes.string,
 		email: PropTypes.string,
 		message: PropTypes.string
@@ -99,7 +100,7 @@ class ContactForm extends Component {
 
 	render() {
 		//const {name, email, message} = this.state;
-		return(
+		return (
 			<React.Fragment>
 				<RbContactForm onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} {...this.state} />
 			</React.Fragment>

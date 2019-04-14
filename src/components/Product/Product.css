@@ -26,3 +26,10 @@
 .product-button {
 	margin: 0.5em;
 }
+
+.product-card .product-button{
+	float: right;
+	margin-right: 0;
+	margin-bottom: 1em;
+}
+

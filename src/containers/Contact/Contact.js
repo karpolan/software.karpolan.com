@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import { SocialList, ContactForm } from '../../components';
 
 class Contact extends Component {
-	PropTypes = {
+	static propTypes = {
 		className: PropTypes.string,
 	};
+
+	static defaultProps = {
+		className: '',
+	}
 
 	render() {
 		return (
@@ -18,8 +22,8 @@ class Contact extends Component {
 				</div>
 
 				<div className="row">
-					<div className="col-md-8 offset-md-2">
-						<ContactForm />
+					<div className="col-md-8 offset-md-2 my-3">
+						<ContactForm  />
 					</div>
 				</div>
 

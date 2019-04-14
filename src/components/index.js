@@ -1,4 +1,5 @@
 import DefaultComponent from './DefaultComponent';
+import Spinner from './Spinner/Spinner';
 import Header from './Header/Header';
 import Content from './Content/Content';
 import Footer from './Footer/Footer';
@@ -20,5 +21,6 @@ export {
 	ProductCard,
 	ProductDetails,
 	
+	Spinner,
 	DefaultComponent
 }

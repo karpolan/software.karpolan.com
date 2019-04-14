@@ -7,7 +7,7 @@ import { Consts } from '../../storage';
  * Footer shows different content depending on screen size. 
  */
 const content = (props) => {
-	const { className = '', forceShow = false} = props;
+	const { className = '', forceShow = false } = props;
 
 	const name = props.name || Consts.name;    //  'Anton Karpenko';
 	const linkedin = props.linkedin || Consts.linkedin;
@@ -17,7 +17,7 @@ const content = (props) => {
 
 	const classShowHideSm = forceShow ? 'd-block' : 'd-none d-sm-block';
 	const classShowHideMd = forceShow ? 'd-block' : 'd-none d-md-block';
- 	return (
+	return (
 		<footer className={`footer ${className}`}>
 			<div className={`container small pt-3 bg-light ${classShowHideSm}`}>
 				<div className="row">
@@ -26,21 +26,21 @@ const content = (props) => {
 						<ul className="list-unstyled">
 							<li className=""><Link to="/" title={'Software created by ' + name}>Software</Link></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://websites.karpolan.com" title={'Websites created by ' + name}>Websites</a></li>
-							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://software.karpolan.com" title={'Services created by ' + name}>Services</a></li>
+							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://services.karpolan.com" title={'Services created by ' + name}>Services</a></li>
 						</ul>
 					</div>
 
 					<div className={`col-md-2 ${classShowHideMd}`}>
 						<ul className="list-unstyled">
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.com" title={'Devices created by ' + name}>Devices</a></li>
-							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.com" title={'Things created by ' + name}>Things</a></li>
+							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.com/cool-things/" title={'Things created by ' + name}>Things</a></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.com" title={'Invetions by ' + name}>Inventions</a></li>
 						</ul>
 					</div>
 
 					<div className={`col-md-2 ${classShowHideMd}`}>
 						<ul className="list-unstyled">
-							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.com" title={'Books by ' + name}>Books</a></li>
+							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://book-product.karpolan.com" title={'Books by ' + name}>Books</a></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://karpolan.blogspot.com" title={'Articles by ' + name}>Articles</a></li>
 							<li className=""><a target="_blank" rel="noopener noreferrer" href="https://blog.karpolan.com" title={'Blog by ' + name}>Blog</a></li>
 						</ul>
@@ -56,7 +56,7 @@ const content = (props) => {
 						</ul>
 
 						<div className={`copyright pb-3 ${classShowHideSm}`}>
-							Copyright &copy; 1994-{ new Date().getFullYear() + ' '}
+							Copyright &copy; 1994-{new Date().getFullYear() + ' '}
 							<a target="_blank" rel="noopener noreferrer" href="https://karpolan.com/">KARPOLAN</a>
 						</div>
 

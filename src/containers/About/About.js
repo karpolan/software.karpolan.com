@@ -13,6 +13,10 @@ class About extends Component {
 		email: PropTypes.string,
 		phone: PropTypes.string,
 	}
+	
+	static defaultProps = {
+		className: '',
+	}
 
 	render() {
 		const urlPicture = process.env.PUBLIC_URL + '/img/about/';

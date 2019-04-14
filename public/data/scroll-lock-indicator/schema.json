@@ -1,0 +1,74 @@
+{
+	"@context": "http://schema.org",
+	"@type": "Product",
+	
+	"name": "Scroll Lock Indicator",
+	"description": "Scroll Lock Indicator software offers two Scroll Lock state indicators: Tray Icon and On-Screen Floating Text. Notifications by sound are also available. Moreover, sound alerts can be different for On and Off states.",
+	"url": "https://scroll-lock-indicator.com",
+	"image": [
+		"https://scroll-lock-indicator.com/images/icon-256x256.png",
+		"https://scroll-lock-indicator.com/images/screenshot.png"
+	],
+	"category": "Software",
+	"mpn": "7",
+	"sku": "sli1x",
+			
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5.0",
+		"ratingCount": "65535"
+	},
+ 	
+	"brand": {
+		"@type": "Organization",
+		"url": "https://karpolan.com",
+		"email": "software@karpolan.com",
+		"name": "KARPOLAN"
+	},
+
+	"offers": [
+		{
+			"@type": "Offer",
+			"name" : "Buy",
+			"url": "https://scroll-lock-indicator.com/buy/",
+			"seller": {
+				"@type": "Organization",
+				"url": "https://scroll-lock-indicator.com",
+				"name": "Scroll Lock Indicator"
+			},
+			"availability": "OnlineOnly",
+			"priceCurrency": "USD",
+			"price": "2.95"
+		},
+		{
+			"@type": "Offer",
+			"name" : "Download",
+			"url": "https://scroll-lock-indicator.com/download/",
+			"seller": {
+				"@type": "Organization",
+				"url": "https://scroll-lock-indicator.com",
+				"name": "Scroll Lock Indicator"
+			},
+			"availability": "OnlineOnly",
+			"priceCurrency": "USD",
+			"price": "0"
+		},
+		{
+			"@type": "Offer",
+			"name" : "Download for PC",
+			"url": "https://scroll-lock-indicator.com/files/scroll-lock-indicator.exe",
+			"itemOffered": {
+				"@type": "SoftwareApplication",
+				"applicationCategory": "UtilitiesApplication",
+				"operatingSystem": "Windows",
+				"screenshot": "https://scroll-lock-indicator.com/images/screenshot.png",
+				"downloadUrl": "https://scroll-lock-indicator.com/files/scroll-lock-indicator.exe",
+				"url": "https://scroll-lock-indicator.com",
+				"name": "Scroll Lock Indicator for PC"
+			},
+			"availability": "OnlineOnly",
+			"priceCurrency": "USD",
+			"price": "0"
+		}
+	]
+}

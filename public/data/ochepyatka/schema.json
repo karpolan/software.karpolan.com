@@ -2,7 +2,6 @@
 	"@context": "http://schema.org",
 	"@type": "Product",
 	
-
 	"name": "oChePyaTka",
 	"description": "Using Ochepyatka you can convert text between different keyboard layouts within a second! Just select an incorrect text fragment and press appropriate keyboard shortcut - the program will make some magic and fix your text immediately! Ochepytka can convert: \"hELLO wORLD\" into \"Hello World\". Cool, isn't it?",
 	"url": "https://ochepyatka.com",
@@ -11,7 +10,7 @@
 		"https://ochepyatka.com/images/screenshot.png"
 	],
 	"category": "Software",
-	"mpn": "2",
+	"mpn": "6",
 	"sku": "ocp1x",
 			
 	"aggregateRating": {

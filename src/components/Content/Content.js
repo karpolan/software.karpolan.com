@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
  * Wrapper for content modules (articles, sidebar, etc.)
  */
 function content(props) {
-	const { className = '', children} = props;
- 	return (
+	const { className = '', children } = props;
+	return (
 		<div className={`container py-3 ${className}`}>
-			{children}	
+			{children}
 		</div>
 	)
 };
