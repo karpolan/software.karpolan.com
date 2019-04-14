@@ -6,13 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import DefaultRouter from './router/';
 import { Header, Footer, Content } from './components';
 
-//import './bootstrap.scss';
-//import 'bootstrap/dist/css/bootstrap.css';
 //import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-//import "mdbreact/dist/css/mdb.css";
-//import './social-icons.css';
 import './social-colors.css';
 
 

@@ -85,6 +85,25 @@ class About extends Component {
 					</div>
 
 				</div>
+				<div className="row">
+
+					<div className="col-12 mt-3">
+						<h4>Tech specification</h4>
+						<section className="tech">
+							<p>
+								This web-site is built using the following technologies and frameworks:
+							</p>
+							<ul>
+								<li><b><a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></b> - is the only programming language used.</li>
+								<li><b><a target="_blank" rel="noopener noreferrer" href="https://reactjs.org">React</a></b> - front-end is Single Page Application (SPA) based on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/create-react-app">Create React App</a> template.</li>
+								<li><b><a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com">Bootstrap</a></b> - visual styles are provided by <a  target="_blank" rel="noopener noreferrer" href="https://react-bootstrap.github.io">React Bootstrap</a> library.</li>
+								<li><b><a target="_blank" rel="noopener noreferrer" href="https://www.json.org">JSON</a></b> - all data is stored in static .json files.</li>
+								<li><b><a target="_blank" rel="noopener noreferrer" href="https://git-scm.com">Git</a></b> - the version control and CI/CD is powerd by <a  target="_blank" rel="noopener noreferrer" href="https://github.com/karpolan/">GitHub</a>.</li>
+							</ul>	
+						</section>
+					</div>
+
+				</div>
 			</article>
 		)
 	}

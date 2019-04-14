@@ -17,7 +17,10 @@ class Contact extends Component {
 
 				<div className="row">
 					<div className="col-12">
-						Feel free to ask me any questions about software development, information technologies or online business.
+						<h4>Contact me</h4>
+						<p>
+							Feel free to ask me any questions about software development, information technologies or online business.
+						</p>
 					</div>
 				</div>
 
@@ -29,8 +32,9 @@ class Contact extends Component {
 
 				<div className="row">
 					<div className="col-12">
+						<h4>Social networks</h4>
 						<p>
-							We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b> everywhere. 
+							We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b> almost everywhere. 
 						</p>	
 						<SocialList />
 					</div>
