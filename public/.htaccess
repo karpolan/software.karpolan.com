@@ -1,9 +1,16 @@
- 
-	<IfModule mod_rewrite.c>
-		RewriteEngine On  
-		RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-		RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-		RewriteRule ^ - [L]
+	RewriteEngine On
 
-		RewriteRule ^ /index.html [L]
-	</IfModule>
+# Redirect //. to //www.
+#	RewriteCond %{HTTP_HOST} !^www\. [NC]
+#	RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect http://. to https://. 
+	RewriteCond %{HTTP:X-Forwarded-Proto} !https
+	RewriteCond %{HTTPS} off
+	RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Serve index.html by default (for unknown files and folders) 
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+	RewriteRule ^ - [L]
+	RewriteRule ^ /index.html [L]
