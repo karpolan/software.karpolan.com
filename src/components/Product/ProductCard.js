@@ -26,7 +26,7 @@ const productCard = (props) => {
 					{contentSubTitle}
 					<Card.Text>
 						<Link to={link}>
-							<Image className="product-icon" src={icon} />
+							<Image className="product-icon" src={icon} alt={name} />
 						</Link>
 						{text}
 						<Link className="product-button" to={link}>

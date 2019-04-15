@@ -13,35 +13,39 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<article className={`contact ${this.props.className}`}>
-
-				<div className="row">
-					<div className="col-12">
-						<h4>Contact me</h4>
-						<p>
-							Feel free to ask me any questions about software development, information technologies or online business.
-						</p>
+			<React.Fragment>
+				<main>
+					<div className={`row contact contact-info ${this.props.className}`}>
+						<div className="col-12">
+							<h4>Contact me</h4>
+							<p>
+								Feel free to ask me any questions about software development, information technologies or online business.
+							</p>
+						</div>
 					</div>
-				</div>
+				</main>
 
-				<div className="row">
-					<div className="col-md-8 offset-md-2 my-3">
-						<ContactForm  />
+				<section>
+					<div className={`row contact contact-form ${this.props.className}`}>
+						<div className="col-md-8 offset-md-2 my-3">
+							<ContactForm />
+						</div>
 					</div>
-				</div>
+				</section>
 
-				<div className="row">
-					<div className="col-12">
-						<h4>Social networks</h4>
-						<p>
-							We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b> almost everywhere. 
-						</p>	
-						<SocialList />
+				<article>
+					<div className={`row contact contact-social ${this.props.className}`}>
+						<div className="col-12">
+							<h4>Social networks</h4>
+							<p>
+								We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b> almost everywhere. 
+							</p>	
+							<SocialList />
+						</div>
 					</div>
-				</div>
-
-			</article>
-		)
+				</article>
+			</React.Fragment>
+		);
 	}
 }; // className BootstrapContactForm	
 

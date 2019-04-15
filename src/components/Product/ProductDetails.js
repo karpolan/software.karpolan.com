@@ -18,7 +18,7 @@ const prouductDetails = (props) => {
 
 		const list = images.map((item, index) => (
 			<Carousel.Item key={index}>
-				<Image className="product-image" src={item} />
+				<Image className="product-image" src={item} alt={`${name} image #${index + 1}`} />
 			</Carousel.Item>
 		));
 
@@ -60,7 +60,7 @@ const prouductDetails = (props) => {
 				</Row>
 				<Row>
 					<Col className="text">
-						<Image className="product-icon" src={icon} />
+						<Image className="product-icon" src={icon} alt={name} />
 						{text}
 					</Col>
 				</Row>

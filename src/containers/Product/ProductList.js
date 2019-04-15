@@ -47,11 +47,13 @@ export class ProductList extends Component {
 		}; // renderCards()
 
 		return (
-			<article className={`product-list ${this.props.className}`}>
-				<CardColumns>
-					{renderCards(this.state.data)}
-				</CardColumns>
-			</article>
+			<main>
+				<article className={`product-list ${this.props.className}`}>
+					<CardColumns>
+						{renderCards(this.state.data)}
+					</CardColumns>
+				</article>
+			</main>
 		)
 	}
 }

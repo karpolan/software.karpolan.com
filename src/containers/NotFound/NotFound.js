@@ -7,8 +7,8 @@ import './NotFound.css';
  */
 function notFound() {
 	return (
-		<div className="not-found">
-			<div className="row">
+		<main>
+			<div className="not-found row">
 				<div className="col-md-12">
 					<div className="error-template">
 						<h1>Oops!</h1>
@@ -29,7 +29,7 @@ function notFound() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 	)
 }
 

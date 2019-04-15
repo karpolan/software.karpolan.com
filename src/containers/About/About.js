@@ -27,85 +27,90 @@ class About extends Component {
 		const phone = this.props.phone || Consts.phone; //  '+38 093 394-48-15';
 
 		return (
-			<article className={`about ${this.props.className}`}>
-				<div className="row">
+			<React.Fragment>
+				<main> 
+					<div className={`row about about-main ${this.props.className}`}>
 
-					<div className="col-md-6 text-center">
-						<section className="photo">
-							<picture>
-								<source className="media-xl" media="(min-width: 1200px)" srcSet={urlPicture + "960.jpg"} />
-								<source className="media-lg" media="(min-width: 992px)" srcSet={urlPicture + "720.jpg"} />
-								<source className="media-md" media="(min-width: 768px)" srcSet={urlPicture + "640.jpg"} />
-								<source className="media-sm" media="(min-width: 576px)" srcSet={urlPicture + "640.jpg"} />
-								<img className="img-fluid rounded" src={urlPicture + "480.jpg"} alt={name}/>
-							</picture>
-						</section>
-					</div>
-
-					<div className="col-md-6">
-						<div className="offset-md-1">
-
-							<h6 className="d-none d-md-block">Hello everybody, I am</h6>
-							<h3>{name}</h3>
-							<h4>Software Engineer</h4>
-							<p>
-								I participated in the creation of many public products, computer games, 
-								internal IT projects, various libraries and tools for other software developers. 
-								I have been coding since 1994, and still love it :)
-							</p>
-
-							<section className="contacts">
-								<p>
-									<i className="far fa-calendar fa-2x mr-3 align-middle"></i> 
-									<time className="align-middle" dateTime="1977-04-23 02:15">April 23, 1977</time>
-								</p>
-								<p>
-									<i className="fas fa-phone fa-2x mr-3 align-middle"></i> 
-									<a className="align-middle" rel="noopener noreferrer" href={`tel:${phone}`}>{phone}</a>
-								</p>
-								<p>
-									<i className="far fa-envelope fa-2x mr-3 align-middle" ></i> 
-									<a className="align-middle" target="_blank" rel="noopener noreferrer" href={`mailto:${email}?subject=From+${domain}+About`}>{email}</a>
-								</p>
-								<div>
-									<i className="fas fa-home fa-2x mr-3 align-middle"></i> 
-									<address className="d-inline">Obolon, Kyiv, UKRAINE</address>
-									<p></p>
-								</div>
+						<div className="col-md-6 text-center">
+							<section className="photo">
+								<picture>
+									<source className="media-xl" media="(min-width: 1200px)" srcSet={urlPicture + "960.jpg"} />
+									<source className="media-lg" media="(min-width: 992px)" srcSet={urlPicture + "720.jpg"} />
+									<source className="media-md" media="(min-width: 768px)" srcSet={urlPicture + "640.jpg"} />
+									<source className="media-sm" media="(min-width: 576px)" srcSet={urlPicture + "640.jpg"} />
+									<img className="img-fluid rounded" src={urlPicture + "480.jpg"} alt={name}/>
+								</picture>
 							</section>
-
-							<section className="social">
-								<p>
-									Follow me on any social network you want. I am <b>KARPOLAN</b> everywhere. 
-								</p>	
-								<SocialList />
-							</section>
-
 						</div>
+
+						<div className="col-md-6">
+							<div className="offset-md-1">
+
+								<h6 className="d-none d-md-block">Hello everybody, I am</h6>
+								<h3>{name}</h3>
+								<h4>Software Engineer</h4>
+								<p>
+									I participated in the creation of many public products, computer games, 
+									internal IT projects, various libraries and tools for other software developers. 
+									I have been coding since 1994, and still love it :)
+								</p>
+
+								<section className="contacts">
+									<p>
+										<i className="far fa-calendar fa-2x mr-3 align-middle"></i> 
+										<time className="align-middle" dateTime="1977-04-23 02:15">April 23, 1977</time>
+									</p>
+									<p>
+										<i className="fas fa-phone fa-2x mr-3 align-middle"></i> 
+										<a className="align-middle" rel="noopener noreferrer" href={`tel:${phone}`}>{phone}</a>
+									</p>
+									<p>
+										<i className="far fa-envelope fa-2x mr-3 align-middle" ></i> 
+										<a className="align-middle" target="_blank" rel="noopener noreferrer" href={`mailto:${email}?subject=From+${domain}+About`}>{email}</a>
+									</p>
+									<div>
+										<i className="fas fa-home fa-2x mr-3 align-middle"></i> 
+										<address className="d-inline">Obolon, Kyiv, UKRAINE</address>
+										<p></p>
+									</div>
+								</section>
+
+								<section className="social">
+									<p>
+										Follow me on any social network you want. I am <b>KARPOLAN</b> everywhere. 
+									</p>	
+									<SocialList />
+								</section>
+
+							</div>
+						</div>
+
 					</div>
+				</main>
 
-				</div>
-				<div className="row">
+				<section>
+					<div className={`row about about-aside ${this.props.className}`}>
 
-					<div className="col-12 mt-3">
-						<h4>Tech specification</h4>
-						<section className="tech">
-							<p>
-								This web-site is built using the following technologies and frameworks:
-							</p>
-							<ul>
-								<li><b><a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></b> - is the only programming language used.</li>
-								<li><b><a target="_blank" rel="noopener noreferrer" href="https://reactjs.org">React</a></b> - front-end is Single Page Application (SPA) based on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/create-react-app">Create React App</a> template.</li>
-								<li><b><a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com">Bootstrap</a></b> - visual styles are provided by <a  target="_blank" rel="noopener noreferrer" href="https://react-bootstrap.github.io">React Bootstrap</a> library.</li>
-								<li><b><a target="_blank" rel="noopener noreferrer" href="https://www.json.org">JSON</a></b> - all data is stored in static .json files.</li>
-								<li><b><a target="_blank" rel="noopener noreferrer" href="https://git-scm.com">Git</a></b> - the version control and CI/CD is powerd by <a  target="_blank" rel="noopener noreferrer" href="https://github.com/karpolan/">GitHub</a>.</li>
-							</ul>	
-						</section>
+						<div className="col-12 mt-3">
+							<h4>Tech specification</h4>
+							<section className="tech">
+								<p>
+									This web-site is built using the following technologies and frameworks:
+								</p>
+								<ul>
+									<li><b><a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></b> - is the only programming language used.</li>
+									<li><b><a target="_blank" rel="noopener noreferrer" href="https://reactjs.org">React</a></b> - front-end is Single Page Application (SPA) based on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/create-react-app">Create React App</a> template.</li>
+									<li><b><a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com">Bootstrap</a></b> - visual styles are provided by <a  target="_blank" rel="noopener noreferrer" href="https://react-bootstrap.github.io">React Bootstrap</a> library.</li>
+									<li><b><a target="_blank" rel="noopener noreferrer" href="https://www.json.org">JSON</a></b> - all data is stored in static .json files.</li>
+									<li><b><a target="_blank" rel="noopener noreferrer" href="https://git-scm.com">Git</a></b> - the version control and CI/CD is powerd by <a  target="_blank" rel="noopener noreferrer" href="https://github.com/karpolan/">GitHub</a>.</li>
+								</ul>	
+							</section>
+						</div>
+
 					</div>
-
-				</div>
-			</article>
-		)
+				</section>
+			</React.Fragment>
+		);
 	}
 }
 

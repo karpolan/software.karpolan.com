@@ -52,15 +52,16 @@ export class Product extends Component {
 		};
 
 		return (
-			<article className={`product ${this.props.className}`}>
-				<ProductDetails {...productData}/>
+			<main>
+				<article className={`product ${this.props.className}`}>
+					<ProductDetails {...productData}/>
+				</article>
 				<script type="application/ld+json">
 					{JSON.stringify(this.state.data)}
 				</script>
-			</article>
-		)
+			</main>
+		);
 	}
-	
 }
 
 export default Product;
