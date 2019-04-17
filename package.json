@@ -1,5 +1,5 @@
 {
-  "name": "software-karpolan-com",
+  "name": "software.karpolan.com",
   "version": "0.5.25",
   "description": "Web application for software.karpolan.com",
   "keywords": [
@@ -13,7 +13,7 @@
   "homepage": "https://software.karpolan.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/karpolan/software-karpolan-com"
+    "url": "https://github.com/karpolan/software.karpolan.com"
   },
   "private": true,
   "dependencies": {
