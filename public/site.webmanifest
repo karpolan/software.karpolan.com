@@ -50,6 +50,6 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "https://software.karpolan.com",
+    "start_url": "/",
     "display": "standalone"
 }

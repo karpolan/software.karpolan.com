@@ -2,16 +2,18 @@
 	"@context": "http://schema.org",
 	"@type": "Product",	
 
+	"url": "https://caps-lock-indicator.com",
 	"name": "Caps Lock Indicator",
 	"description": "Caps Lock Indicator software offers two Caps Lock state indicators: Tray Icon and On-Screen Floating Text. Notifications by sound are also available. Moreover, sound alerts can be different for On and Off states.",
-	"url": "https://caps-lock-indicator.com",
+	"category": "Software",
+	"mpn": "2",
+	"sku": "cli1x",
+	
+	"logo": "https://caps-lock-indicator.com/images/icon-128x128.png",
 	"image": [
 		"https://caps-lock-indicator.com/images/icon-256x256.png",
 		"https://caps-lock-indicator.com/images/screenshot.png"
 	],
-	"category": "Software",
-	"mpn": "2",
-	"sku": "cli1x",
 			
 	"aggregateRating": {
 		"@type": "AggregateRating",
