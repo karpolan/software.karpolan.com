@@ -5,143 +5,137 @@ https://www.materialui.co/socialcolors
 */
 
 /* https://en.facebookbrand.com/#brand-guidelines-assets */
-.fa-facebook, 
-.fa-facebook-square, 
+.fa-facebook,
+.fa-facebook-square,
 .fa-facebook-f,
 .facebook-color {
-	color: #3b5999;
-	color: #365998;
-	color: #365899;
-	color: #4267b2; /* from SVG of offcial logo */
+  color: #3b5999;
+  color: #365998;
+  color: #365899;
+  color: #4267b2; /* from SVG of offcial logo */
 }
 
 /* https://brand.linkedin.com/visual-identity/color-palettes */
-.fa-linkedin, 
+.fa-linkedin,
 .fa-linkedin-square,
 .fa-linkedin-in,
 .linkedin-color {
-	color: #007bb5;
-	color: #00a0dc;
-	color: #0077B5; /* from offcial logo for screens */
+  color: #007bb5;
+  color: #00a0dc;
+  color: #0077b5; /* from offcial logo for screens */
 }
 
 /* https://about.twitter.com/en_us/company/brand-resources.html */
-.fa-twitter, 
+.fa-twitter,
 .fa-twitter-square,
 .twitter-color {
-	color: #55acee;
-	color: #1DA1F2; /* from SVG of offcial logo */
+  color: #55acee;
+  color: #1da1f2; /* from SVG of offcial logo */
 }
 
 /* https://www.youtube.com/yt/about/brand-resources/#logos-icons-colors */
-.fa-youtube, 
-.fa-youtube-play, 
+.fa-youtube,
+.fa-youtube-play,
 .fa-youtube-square,
 .youtube-color {
-	/* color: #cd201f; */
-	color: #FF0000;
+  /* color: #cd201f; */
+  color: #ff0000;
 }
 
 /* https://en.instagram-brand.com/assets/icons */
 .fa-instagram,
 .instagram-color {
-	color: #517fa4;
-	color: #e4405f;
-	color: #c32aa3;
-	color: #F00075;
+  color: #517fa4;
+  color: #e4405f;
+  color: #c32aa3;
+  color: #f00075;
 }
-
 
 /* https://business.pinterest.com/en-gb/pinterest-brand-guidelines */
-.fa-pinterest, 
+.fa-pinterest,
 .fa-pinterest-square,
 .pinterest-color {
-	color: #bd081c;
-	color: #e60023; /* Pinterest Red (c) */
-	color: #E60019; /* from SVG of pinterest badge */
+  color: #bd081c;
+  color: #e60023; /* Pinterest Red (c) */
+  color: #e60019; /* from SVG of pinterest badge */
 }
 
-.fa-tumblr, 
+.fa-tumblr,
 .fa-tumblr-square,
 .tumbler-color {
-	color: #32506d;
-	color: #35465d;
+  color: #32506d;
+  color: #35465d;
 }
 
 .reddit-color {
-	color: #ff5700;
-	color: #ff4500;
+  color: #ff5700;
+  color: #ff4500;
 }
 
 .fa-vine,
 .vine-color {
-	color: #00bf8f;
-	color: #00b489;
+  color: #00bf8f;
+  color: #00b489;
 }
 
 .fa-flickr,
 .flickr-color {
-	color: #f40083;
-	color: #ff0084;
+  color: #f40083;
+  color: #ff0084;
 }
 
 .twitch-color {
-	color: #6441a4;
+  color: #6441a4;
 }
-
 
 /* https://press.vimeo.com/brand-guidelines */
 .fa-vimeo-square,
 .vimeo-color {
-	color: #1ab7ea;
+  color: #1ab7ea;
 }
 
 .fa-spotify,
 .spotyfy-color {
-	color: #1db954;
-	color: #1ed760;
-
+  color: #1db954;
+  color: #1ed760;
 }
 
 .vk-color {
-	color: #4c75a3;
-	color: #5181b8;
-	color: #2a5885;
-	color: #4a76a8;
+  color: #4c75a3;
+  color: #5181b8;
+  color: #2a5885;
+  color: #4a76a8;
 }
 
 .telegram-color {
-	color: #0088cc;
+  color: #0088cc;
 }
 
 .whatsapp-color {
-	color: #25D366;
+  color: #25d366;
 }
 
 .snapchat-color {
-	color: #FFFC00;
+  color: #fffc00;
 }
 
 .wechat-color {
-	color: #09b83e;
-	color: #25d366;
+  color: #09b83e;
+  color: #25d366;
 }
 
 .fa-github,
 .github-color {
-	color: #171515
+  color: #171515;
 }
 
 .fa-slideshare,
 .slideshare-color {
-	color: #e68523;
+  color: #e68523;
 }
 
-
-.fa-google-plus, 
+.fa-google-plus,
 .fa-google-plus-square,
-.google-plus-color 
-{
-	color: #dd4b39;
+.google-plus-color {
+  color: #dd4b39;
 }
-

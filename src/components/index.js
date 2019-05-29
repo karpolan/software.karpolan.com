@@ -9,18 +9,14 @@ import ProductCard from './Product/ProductCard';
 import ProductDetails from './Product/ProductDetails';
 
 export {
-	Header,
-	Content,
-	Footer,
-	
-	DefaultComponent as Sidebar,
-	
-	SocialList,
-	ContactForm,
-
-	ProductCard,
-	ProductDetails,
-	
-	Spinner,
-	DefaultComponent
-}
+  Header,
+  Content,
+  Footer,
+  DefaultComponent as Sidebar,
+  SocialList,
+  ContactForm,
+  ProductCard,
+  ProductDetails,
+  Spinner,
+  DefaultComponent,
+};
