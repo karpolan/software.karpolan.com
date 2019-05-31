@@ -7,7 +7,7 @@ import { Nav, Navbar } from 'react-bootstrap';
  * Header with Navbar using React-Bootstrap https://react-bootstrap.github.io
  * Also see: https://stackoverflow.com/questions/35687353/react-bootstrap-link-item-in-a-navitem
  */
-const rbHeader = ({ className = '' }) => {
+const rbHeader = ({ className }) => {
   // Note: <Nav.Link href="#"... is required to collapse after click.
   // Todo: Make collapse when click on the Brand too.
   return (
