@@ -7,7 +7,7 @@ import { Consts } from '../../storage';
  * Footer shows different content depending on screen size.
  */
 const footer = (props) => {
-  const { className = '', forceShow = false } = props;
+  const { className, forceShow } = props;
 
   const name = props.name || Consts.name; //  'Anton Karpenko';
   const linkedin = props.linkedin || Consts.linkedin;
@@ -127,8 +127,7 @@ const footer = (props) => {
 
             <div className={`copyright pb-3 ${classShowHideSm}`}>
               Copyright &copy; 1994-
-              {new Date().getFullYear()}
-              &nbsp;
+              <span>{new Date().getFullYear()} </span>
               <a target="_blank" rel="noopener noreferrer" href="https://karpolan.com/">
                 KARPOLAN
               </a>

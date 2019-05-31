@@ -6,7 +6,7 @@ import { Consts } from '../../storage';
  * Renders <ul> with social icons
  */
 function socialList(props) {
-  const { className = '' } = props;
+  const { className } = props;
 
   const name = props.name || Consts.name; //  'Anton Karpenko';
   const linkedin = props.linkedin || Consts.linkedin;

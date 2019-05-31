@@ -5,4 +5,4 @@ import About from './About/About';
 import Product from './Product/Product';
 import ProductList from './Product/ProductList';
 
-export { Product, ProductList, About, Contact, NotFound, DefaulContainer };
+export { DefaulContainer, NotFound, Product, ProductList, About, Contact };

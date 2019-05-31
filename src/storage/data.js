@@ -40,7 +40,7 @@ export const getData = (id, callback, property = 'data') => {
       // Call data setting callback as success
       callback({
         loaded: true,
-        id: id,
+        id,
         [property]: data,
       });
     })
@@ -49,7 +49,7 @@ export const getData = (id, callback, property = 'data') => {
       // Call data setting callback as fail
       callback({
         error: true,
-        id: id,
+        id,
         [property]: {},
       });
     });

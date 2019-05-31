@@ -6,15 +6,17 @@ class Contact extends Component {
   static propTypes = {
     className: PropTypes.string,
   };
+
   static defaultProps = {
     className: '',
   };
 
   render() {
+    const { className } = this.props;
     return (
-      <React.Fragment>
+      <>
         <main>
-          <div className={`row contact contact-info ${this.props.className}`}>
+          <div className={`row contact contact-info ${className}`}>
             <div className="col-12">
               <h4>Contact me</h4>
               <p>
@@ -26,7 +28,7 @@ class Contact extends Component {
         </main>
 
         <section>
-          <div className={`row contact contact-form ${this.props.className}`}>
+          <div className={`row contact contact-form ${className}`}>
             <div className="col-md-8 offset-md-2 my-3">
               <ContactForm />
             </div>
@@ -34,18 +36,19 @@ class Contact extends Component {
         </section>
 
         <article>
-          <div className={`row contact contact-social ${this.props.className}`}>
+          <div className={`row contact contact-social ${className}`}>
             <div className="col-12">
               <h4>Social networks</h4>
               <p>
-                We can also discuss different topics on social networks. I am registered under the name <b>KARPOLAN</b>{' '}
-                almost everywhere.
+                <span>We can also discuss different topics on social networks. I am registered under the name </span>
+                <b>KARPOLAN</b>
+                <span> almost everywhere.</span>
               </p>
               <SocialList />
             </div>
           </div>
         </article>
-      </React.Fragment>
+      </>
     );
   }
 } // className BootstrapContactForm

@@ -27,6 +27,7 @@ class ContactForm extends Component {
       message: props.message,
       formSubmitted: false,
       emailSent: false,
+      scriptsAdded: false,
     };
   }
 
@@ -36,6 +37,7 @@ class ContactForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
+    // Todo: verify this.state.scriptsAdded
     this.setState({ formSubmitted: true });
     this.sendContactEmail();
   };
@@ -56,6 +58,7 @@ class ContactForm extends Component {
     script1.async = true;
     script1.src = 'https://cdn.emailjs.com/sdk/2.3.2/email.min.js';
     document.head.appendChild(script1);
+    this.setState({ scriptsAdded: true });
   }
 
   /**
@@ -65,17 +68,10 @@ class ContactForm extends Component {
     const { name, email, message } = this.state;
     if (email === '' || message === '') {
       console.warn('sendContactEmail() canceled. Nothing to send.');
-      return false;
+      return;
     }
     /*
 		emailjs.init("user_f84LhJ9n84Exjm3QTSbeF");
-
-		var template_params = {
-			"email": "email_value",
-			"name": "name_value",
-			"message": "message_value"
-		}
-
 		var service_id = "default_service";
 		var template_id = "template_LD76xSO8_clone";
 		emailjs.send(service_id, template_id, template_params);
@@ -87,14 +83,13 @@ class ContactForm extends Component {
         email,
         message,
       })
-      .then((res) => {
+      .then(() => {
         console.log('sendContactEmail() succesful');
         this.setState({
           emailSent: true,
           message: '',
           formSubmitted: false,
         });
-        return true;
       })
       .catch((err) => {
         console.error('sendContactEmail() failed. Error: ', err);
@@ -102,16 +97,15 @@ class ContactForm extends Component {
           emailSent: false,
           formSubmitted: false,
         });
-        return false;
       });
   }
 
   render() {
     // const {name, email, message} = this.state;
     return (
-      <React.Fragment>
+      <>
         <RbContactForm onFormSubmit={this.onFormSubmit} onInputChange={this.onInputChange} {...this.state} />
-      </React.Fragment>
+      </>
     );
   }
 }

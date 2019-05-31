@@ -7,10 +7,11 @@ import { Data } from '../../storage';
 /**
  * Renders Single Product page using data from "scheme.json" file in `/data/${id}/` folder.
  */
-export class Product extends Component {
+class Product extends Component {
   static propTypes = {
     className: PropTypes.string,
   };
+
   static defaultProps = {
     className: '',
   };
@@ -27,35 +28,59 @@ export class Product extends Component {
   };
 
   componentDidMount() {
-    const { id } = this.props.match.params;
     // Load single product data form `/data/${id}/` folder into "data" state
-    Data.getData(id, this.setState.bind(this), 'data');
+    Data.getData(this.props.match.params.id, this.setState.bind(this), 'data');
+  }
+
+  getIcon() {
+    const { data } = this.state;
+    let result = data.logo; // Try to use "logo" property
+    if (!result) result = data.image; // If "logo" property is empty, try to use "image" property
+    if (Array.isArray(result)) [result] = result; // Use first image. Same as result = result[]
+    return result;
+  }
+
+  getDates() {
+    const { data } = this.state;
+    if (!data.productionDate) return null;
+
+    let result = data.productionDate;
+    if (data.releaseDate && data.releaseDate.length > 0) {
+      result += ` \u2013 ${data.releaseDate}`;
+    } else {
+      result += ' \u2013 current time';
+    }
+    return result;
   }
 
   render() {
+    const { error, loaded, id, data } = this.state;
+    const { className } = this.props;
+
     // Redirect to NotFound if data loading have been failed
-    if (this.state.error === true) return <Redirect to="/404" />;
+    if (error === true) return <Redirect to="/404" />;
 
     // Show only Spinner if data was not loaded yet
-    if (this.state.loaded === false) return <Spinner />;
+    if (loaded === false) return <Spinner />;
 
-    let icon = this.state.data.image;
-    if (Array.isArray(icon)) icon = icon[0]; // Use first image as icon
+    // Create data object that will be passed as props to the ProductDetails component
     const productData = {
-      id: this.state.id,
-      name: this.state.data.name,
-      text: this.state.data.description,
-      icon: icon,
-      images: this.state.data.image,
-      offers: this.state.data.offers,
+      id,
+      icon: this.getIcon(),
+      name: data.name,
+      description: data.slogan,
+      text: data.description,
+      dates: this.getDates(),
+      images: data.image,
+      offers: data.offers,
     };
 
     return (
       <main>
-        <article className={`product ${this.props.className}`}>
+        <article className={`product ${className}`}>
           <ProductDetails {...productData} />
         </article>
-        <script type="application/ld+json">{JSON.stringify(this.state.data)}</script>
+        <script type="application/ld+json">{JSON.stringify(data)}</script>
       </main>
     );
   }

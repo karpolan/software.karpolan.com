@@ -13,30 +13,36 @@ class About extends Component {
     email: PropTypes.string,
     phone: PropTypes.string,
   };
+
   static defaultProps = {
     className: '',
+    name: '',
+    email: '',
+    phone: '',
   };
 
   render() {
-    const urlPicture = process.env.PUBLIC_URL + '/img/about/';
+    const urlPicture = `${process.env.PUBLIC_URL}/img/about/`;
     const domain = window.location.hostname.toUpperCase();
+    const { className } = this.props;
 
-    const name = this.props.name || Consts.name; //  'Anton Karpenko';
-    const email = this.props.email || Consts.email; // 'i@karpolan.com';
-    const phone = this.props.phone || Consts.phone; //  '+38 093 394-48-15';
+    let { name, email, phone } = this.props;
+    name = name || Consts.name; // 'Anton Karpenko';
+    email = email || Consts.email; // 'i@karpolan.com';
+    phone = phone || Consts.phone; // '+38 093 394-48-15';
 
     return (
-      <React.Fragment>
+      <>
         <main>
-          <div className={`row about about-main ${this.props.className}`}>
+          <div className={`row about about-main ${className}`}>
             <div className="col-md-6 text-center">
               <section className="photo">
                 <picture>
-                  <source className="media-xl" media="(min-width: 1200px)" srcSet={urlPicture + '960.jpg'} />
-                  <source className="media-lg" media="(min-width: 992px)" srcSet={urlPicture + '720.jpg'} />
-                  <source className="media-md" media="(min-width: 768px)" srcSet={urlPicture + '640.jpg'} />
-                  <source className="media-sm" media="(min-width: 576px)" srcSet={urlPicture + '640.jpg'} />
-                  <img className="img-fluid rounded" src={urlPicture + '480.jpg'} alt={name} />
+                  <source className="media-xl" media="(min-width: 1200px)" srcSet={`${urlPicture}960.jpg`} />
+                  <source className="media-lg" media="(min-width: 992px)" srcSet={`${urlPicture}720.jpg`} />
+                  <source className="media-md" media="(min-width: 768px)" srcSet={`${urlPicture}640.jpg`} />
+                  <source className="media-sm" media="(min-width: 576px)" srcSet={`${urlPicture}640.jpg`} />
+                  <img className="img-fluid rounded" src={`${urlPicture}480.jpg`} alt={name} />
                 </picture>
               </section>
             </div>
@@ -84,7 +90,9 @@ class About extends Component {
 
                 <section className="social">
                   <p>
-                    Follow me on any social network you want. I am <b>KARPOLAN</b> everywhere.
+                    <span>Follow me on any social network you want. I am </span>
+                    <b>KARPOLAN</b>
+                    <span> everywhere.</span>
                   </p>
                   <SocialList />
                 </section>
@@ -94,7 +102,7 @@ class About extends Component {
         </main>
 
         <section>
-          <div className={`row about about-aside ${this.props.className}`}>
+          <div className={`row about about-aside ${className}`}>
             <div className="col-12 mt-3">
               <h4>Tech specification</h4>
               <section className="tech">
@@ -109,48 +117,48 @@ class About extends Component {
                       >
                         JavaScript
                       </a>
-                    </b>{' '}
-                    - is the only programming language used.
+                    </b>
+                    <span> - is the only programming language used.</span>
                   </li>
                   <li>
                     <b>
                       <a target="_blank" rel="noopener noreferrer" href="https://reactjs.org">
                         React
                       </a>
-                    </b>{' '}
-                    - front-end is Single Page Application (SPA) based on{' '}
+                    </b>
+                    <span> - front-end is Single Page Application (SPA) based on </span>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/create-react-app">
                       Create React App
-                    </a>{' '}
-                    template.
+                    </a>
+                    <span> template.</span>
                   </li>
                   <li>
                     <b>
                       <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com">
                         Bootstrap
                       </a>
-                    </b>{' '}
-                    - visual styles are provided by{' '}
+                    </b>
+                    <span> - visual styles are provided by </span>
                     <a target="_blank" rel="noopener noreferrer" href="https://react-bootstrap.github.io">
                       React Bootstrap
-                    </a>{' '}
-                    library.
+                    </a>
+                    <span> library.</span>
                   </li>
                   <li>
                     <b>
                       <a target="_blank" rel="noopener noreferrer" href="https://www.json.org">
                         JSON
                       </a>
-                    </b>{' '}
-                    - all data is stored in static .json files.
+                    </b>
+                    <span> - all data is stored in static .json files.</span>
                   </li>
                   <li>
                     <b>
                       <a target="_blank" rel="noopener noreferrer" href="https://git-scm.com">
                         Git
                       </a>
-                    </b>{' '}
-                    - the version control and CI/CD is powerd by{' '}
+                    </b>
+                    <span> - the version control and CI/CD is powerd by </span>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/karpolan/">
                       GitHub
                     </a>
@@ -161,7 +169,7 @@ class About extends Component {
             </div>
           </div>
         </section>
-      </React.Fragment>
+      </>
     );
   }
 }

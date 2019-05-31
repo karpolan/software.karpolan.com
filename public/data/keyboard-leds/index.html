@@ -1,54 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-</head>
-<body>
-	<h1 id="name"></h1>
-	<div>
-		<p id="desc"></p>
-		<a id="link"></a>
-	</div>
-	
-	<script type="text/javascript">	
-		function loadJsonFile(fileName = './schema.json') {
-			return fetch(fileName, {credentials: 'same-origin'})
-				.then( function (response) {
-					if (!response.ok) {
-					   throw new Error("HTTP error " + response.status);
-					}
-					return response.json();
-				})
-				.then( function (json) {
-					return json;
-				})
-				.catch( function (error) {
-					console.error('loadJsonFile(%s) failed, Error: %s', fileName, error.message);
-					return null;
-				});
-		}; // loadJsonFile()
-
-		loadJsonFile('./schema.json').then( function (json) { 
-			console.log('JSON:', json);
-			if (json) {
-				// Add <script type="application/ld+json"> with json data
-				var script = document.createElement('script');
-				script.type = 'application/ld+json';
-				script.innerHTML = JSON.stringify(json);
-				document.getElementsByTagName('head')[0].appendChild(script); 
-
-				// Populate DOM elements
-				document.title = json['name'];	
-				document.getElementById('name').innerHTML = json['name'];
-				document.getElementById('desc').innerHTML = json['description'];
-				var link = document.getElementById('link');
-				if (link) {
-					link.href = json['url'];
-					link.innerHTML = 'More about ' + json['name'];
-				}	
-			}	
-		});	
-	</script>	
-</body>
-</html>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>Keyboard LEDs</title>
+    <meta
+      name="description"
+      content="Keyboard LEDs software product is created by Anton Karpenko (aka KARPOLAN)"
+    />
+  </head>
+  <body>
+    <h1 id="name">Keyboard LEDs</h1>
+    <div>
+      <p id="desc">Shows current state of Caps Lock, Num Lock, and Scroll Lock on the screen of PC.</p>
+      <a id="link" href="https://keyboard-leds.com">More about Keyboard LEDs software</a>
+      <p id="text">Lots of notebooks, netbooks and cordless keyboards have no indicators for Caps Lock, and Num Lock. Scroll Lock's bulb disappeared almost from any hardware for now. Keyboard Leds software solves this problem. The program lets you know the current state of keyboard locks. You can see the status either on a small icon in the system tray or on a floating OSD window.</p>
+    </div>
+    <script type="application/ld+json">
+{"@context":"http://schema.org","@type":"Product","name":"Keyboard LEDs","alternateName":"CapsLockIndicator","slogan":"Shows current state of Caps Lock, Num Lock, and Scroll Lock on the screen of PC.","description":"Lots of notebooks, netbooks and cordless keyboards have no indicators for Caps Lock, and Num Lock. Scroll Lock's bulb disappeared almost from any hardware for now. Keyboard Leds software solves this problem. The program lets you know the current state of keyboard locks. You can see the status either on a small icon in the system tray or on a floating OSD window.","url":"https://keyboard-leds.com","logo":"https://keyboard-leds.com/images/icon-128x128.png","image":["https://keyboard-leds.com/images/icon-256x256.png","https://keyboard-leds.com/images/screenshot.png"],"category":"Software","mpn":"3","sku":"kb2x","productionDate":"2010","releaseDate":"","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","ratingCount":"65535"},"brand":{"@type":"Organization","url":"https://karpolan.com","email":"software@karpolan.com","name":"KARPOLAN"},"offers":[{"@type":"Offer","name":"Download","url":"https://keyboard-leds.com/download/","seller":{"@type":"Organization","url":"https://keyboard-leds.com","name":"Keyboard LEDs"},"availability":"OnlineOnly","priceCurrency":"USD","price":"0"},{"@type":"Offer","name":"Download for PC","url":"https://keyboard-leds.com/files/keyboard-leds.exe","itemOffered":{"@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows","screenshot":"https://keyboard-leds.com/images/screenshot.png","downloadUrl":"https://keyboard-leds.com/files/keyboard-leds.exe","url":"https://keyboard-leds.com","name":"Keyboard LEDs for PC"},"availability":"OnlineOnly","priceCurrency":"USD","price":"0"}]}
+    </script>
+  </body>
+<html>

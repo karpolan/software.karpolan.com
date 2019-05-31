@@ -1,3 +1,6 @@
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-param-reassign */
+
 /**
  * Shuffles array in place. ES6 version
  * @param {Array} a items An array containing the items.

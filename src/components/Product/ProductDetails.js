@@ -7,8 +7,7 @@ import './Product.css';
  * Renders Product Details page using props as data
  */
 const prouductDetails = (props) => {
-  const { name, text, icon, images, offers } = props;
-  //	const contentLinks = (links) ? links.map((link, index) => <Card.Link key={index} as={Link} to={link.url}>{link.text}</Card.Link>) : null;
+  const { name, icon, text, description, dates, images, offers } = props;
 
   /**
    * Renders all images as Carousel
@@ -61,39 +60,49 @@ const prouductDetails = (props) => {
   }; // renderOffers()
 
   return (
-    <React.Fragment>
+    <>
       <Container>
         <Row>
           <Col className="name">
             <h1>{name}</h1>
+            {dates && <h6 className="font-italic d-none d-sm-block">{dates}</h6>}
           </Col>
         </Row>
         <Row>
-          <Col className="text">
+          <Col className="description">
             <Image className="product-icon" src={icon} alt={name} />
-            {text}
+            {description}
           </Col>
         </Row>
         <Row>
           <Col className="images">{renderImages()}</Col>
         </Row>
+        {text && (
+          <Row>
+            <Col className="text">{text}</Col>
+          </Row>
+        )}
         <Row>
           <Col className="buttons">{renderOffers()}</Col>
         </Row>
       </Container>
-    </React.Fragment>
+    </>
   );
 };
 
 prouductDetails.propTypes = {
-  name: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  dates: PropTypes.string,
   images: PropTypes.arrayOf(PropTypes.string),
   offers: PropTypes.arrayOf(PropTypes.object),
 };
 
 prouductDetails.defaultProps = {
+  text: '',
+  dates: null,
   images: null,
   offers: null,
 };

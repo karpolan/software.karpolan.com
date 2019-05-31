@@ -1,54 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-</head>
-<body>
-	<h1 id="name"></h1>
-	<div>
-		<p id="desc"></p>
-		<a id="link"></a>
-	</div>
-	
-	<script type="text/javascript">	
-		function loadJsonFile(fileName = './schema.json') {
-			return fetch(fileName, {credentials: 'same-origin'})
-				.then( function (response) {
-					if (!response.ok) {
-					   throw new Error("HTTP error " + response.status);
-					}
-					return response.json();
-				})
-				.then( function (json) {
-					return json;
-				})
-				.catch( function (error) {
-					console.error('loadJsonFile(%s) failed, Error: %s', fileName, error.message);
-					return null;
-				});
-		}; // loadJsonFile()
-
-		loadJsonFile('./schema.json').then( function (json) { 
-			console.log('JSON:', json);
-			if (json) {
-				// Add <script type="application/ld+json"> with json data
-				var script = document.createElement('script');
-				script.type = 'application/ld+json';
-				script.innerHTML = JSON.stringify(json);
-				document.getElementsByTagName('head')[0].appendChild(script); 
-
-				// Populate DOM elements
-				document.title = json['name'];	
-				document.getElementById('name').innerHTML = json['name'];
-				document.getElementById('desc').innerHTML = json['description'];
-				var link = document.getElementById('link');
-				if (link) {
-					link.href = json['url'];
-					link.innerHTML = 'More about ' + json['name'];
-				}	
-			}	
-		});	
-	</script>	
-</body>
-</html>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>Scroll Lock Indicator</title>
+    <meta
+      name="description"
+      content="Scroll Lock Indicator software product is created by Anton Karpenko (aka KARPOLAN)"
+    />
+  </head>
+  <body>
+    <h1 id="name">Scroll Lock Indicator</h1>
+    <div>
+      <p id="desc">Shows current state of Scroll Lock swith on the screen as icon near system clock and as floating On-Screen display.</p>
+      <a id="link" href="https://scroll-lock-indicator.com">More about Scroll Lock Indicator software</a>
+      <p id="text">Scroll Lock Indicator software offers two Scroll Lock state indicators: Tray Icon and On-Screen Floating Text. Notifications by sound are also available. Moreover, sound alerts can be different for On and Off states.</p>
+    </div>
+    <script type="application/ld+json">
+{"@context":"http://schema.org","@type":"Product","name":"Scroll Lock Indicator","alternateName":"ScrollLockIndicator","slogan":"Shows current state of Scroll Lock swith on the screen as icon near system clock and as floating On-Screen display.","description":"Scroll Lock Indicator software offers two Scroll Lock state indicators: Tray Icon and On-Screen Floating Text. Notifications by sound are also available. Moreover, sound alerts can be different for On and Off states.","url":"https://scroll-lock-indicator.com","logo":"https://scroll-lock-indicator.com/images/icon-128x128.png","image":["https://scroll-lock-indicator.com/images/icon-256x256.png","https://scroll-lock-indicator.com/images/screenshot.png"],"category":"Software","mpn":"7","sku":"sli1x","productionDate":"2012","releaseDate":"","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","ratingCount":"65535"},"brand":{"@type":"Organization","url":"https://karpolan.com","email":"software@karpolan.com","name":"KARPOLAN"},"offers":[{"@type":"Offer","name":"Buy","url":"https://scroll-lock-indicator.com/buy/","seller":{"@type":"Organization","url":"https://scroll-lock-indicator.com","name":"Scroll Lock Indicator"},"availability":"OnlineOnly","priceCurrency":"USD","price":"2.95"},{"@type":"Offer","name":"Download","url":"https://scroll-lock-indicator.com/download/","seller":{"@type":"Organization","url":"https://scroll-lock-indicator.com","name":"Scroll Lock Indicator"},"availability":"OnlineOnly","priceCurrency":"USD","price":"0"},{"@type":"Offer","name":"Download for PC","url":"https://scroll-lock-indicator.com/files/scroll-lock-indicator.exe","itemOffered":{"@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows","screenshot":"https://scroll-lock-indicator.com/images/screenshot.png","downloadUrl":"https://scroll-lock-indicator.com/files/scroll-lock-indicator.exe","url":"https://scroll-lock-indicator.com","name":"Scroll Lock Indicator for PC"},"availability":"OnlineOnly","priceCurrency":"USD","price":"0"}]}
+    </script>
+  </body>
+<html>

@@ -17,11 +17,18 @@
         "code": 120
       }
     ],
-    "react/prefer-stateless-function": ["off"],
-    "prefer-template": [true, "allow-single-concat"],
-    "prefer-promise-reject-errors": ["off"],
-    "react/jsx-filename-extension": ["off"],
     "react/prop-types": ["warn"],
+    "react/no-array-index-key": ["warn"],
+    "react/destructuring-assignment": ["warn"],
+    "react/prefer-stateless-function": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/jsx-one-expression-per-line": ["off"],
+    "prefer-template": ["warn"],
+    "prefer-promise-reject-errors": ["off"],
+    "prefer-destructuring": ["warn"],
+    "no-use-before-define": ["warn"],
+    "no-plusplus": ["off"],
+    "no-param-reassign": ["warn"],
     "no-return-assign": ["off"]
   }
 }
