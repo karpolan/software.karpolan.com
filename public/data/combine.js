@@ -85,8 +85,9 @@ ${JSON.stringify(newObject)}
  * Build index.html and sitemap.xml files with links to all "/abc-xyz/" folders
  */
 glob('**/index.html', {}, (error, files) => {
-  const htmlItems = [];
-  const xmlItems = [];
+  const htmlDataItems = []; // for '/data/index.html'
+  const xmlDataItems = []; // for '/data/sitempa.xml'
+  const xmlRootItems = []; // for '/sitempa.xml'
 
   if (error) {
     console.error('glob error: ', error);
@@ -99,8 +100,9 @@ glob('**/index.html', {}, (error, files) => {
     if (link !== '') {
       // Skipping root folder
       const text = capitalizeString(link.replace(/-/g, ' '));
-      htmlItems.push(`<li><a href="${link}/">${text}</a></li>`);
-      xmlItems.push(`<url><loc>https://software.karpolan.com/data/${link}/</loc><priority>0.4</priority></url>`);
+      htmlDataItems.push(`<li><a href="${link}/">${text}</a></li>`);
+      xmlDataItems.push(`<url><loc>https://software.karpolan.com/data/${link}/</loc><priority>0.7</priority></url>`);
+      xmlRootItems.push(`<url><loc>https://software.karpolan.com/${link}</loc><priority>0.9</priority></url>`);
     }
   }); // files.map()
 
@@ -114,7 +116,7 @@ glob('**/index.html', {}, (error, files) => {
   <body>
     <h1 id="name">All Products</h1>
     <ul>
-${htmlItems.join('\n')}
+${htmlDataItems.join('\n')}
     </ul>
   </body>
 </html>`;
@@ -127,11 +129,11 @@ ${htmlItems.join('\n')}
   });
   console.log('HTML links to all sub-folders added to "index.html" file');
 
-  // Write "sitemap.xml"
+  // Create Data Sitemap "/data/sitemap.xml"
   const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://software.karpolan.com/data/</loc><priority>0.6</priority></url>
-${xmlItems.join('\n')}
+${xmlDataItems.join('\n')}
 </urlset>`;
   fs.writeFile('sitemap.xml', xmlContent, (err) => {
     if (err) {
@@ -140,7 +142,24 @@ ${xmlItems.join('\n')}
     }
     return true;
   });
-  console.log('URL of all sub-folders added to "sitemap.xml" file');
+  console.log('URL of all sub-folders added to "/data/sitemap.xml" file');
+
+  // Create Root sitemap "/sitemap.xml"
+  const xmpRootSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://software.karpolan.com</loc><priority>1.0</priority></url>
+<url><loc>https://software.karpolan.com/contact</loc><priority>0.3</priority></url>
+<url><loc>https://software.karpolan.com/about</loc><priority>0.4</priority></url>
+${xmlRootItems.join('\n')}
+</urlset>`;
+  fs.writeFile('../sitemap.xml', xmpRootSitemap, (err) => {
+    if (err) {
+      console.error('fs.writeFile error: ', err);
+      return false;
+    }
+    return true;
+  });
+  console.log('URL of all products added to "/sitemap.xml" file');
 
   return true;
 }); // glob('**/index.html')
