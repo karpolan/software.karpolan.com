@@ -36,7 +36,7 @@ class Product extends Component {
     const { data } = this.state;
     let result = data.logo; // Try to use "logo" property
     if (!result) result = data.image; // If "logo" property is empty, try to use "image" property
-    if (Array.isArray(result)) [result] = result; // Use first image. Same as result = result[]
+    if (Array.isArray(result)) [result] = result; // Use first image. Same as result = result[0]
     return result;
   }
 
