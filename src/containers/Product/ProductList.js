@@ -28,6 +28,16 @@ class ProductList extends Component {
     Data.getAllData(this.setState.bind(this), 'data');
   }
 
+  /**
+   * Returns icon resource depending on schema props
+   */
+  getIcon = (schema) => {
+    let result = schema.logo; // Try to use "logo" property
+    if (!result) result = schema.image; // If "logo" property is empty, use "image" property
+    if (Array.isArray(result)) [result] = result; // In case of array use only first image. Same as result = result[0]
+    return result;
+  };
+
   render() {
     const { error, loaded, data } = this.state;
     const { className } = this.props;
@@ -41,20 +51,16 @@ class ProductList extends Component {
     const renderCards = (productList) => {
       if (!Array.isArray(productList) || productList.length < 1) return null;
 
-      const cards = productList.map((p) => {
-        let icon = p.schema.image;
-        if (Array.isArray(icon)) [icon] = icon; // Use first image as icon, Same as icon = icon[0]
-        return (
-          <ProductCard
-            key={p.id}
-            link={`/${p.id}`}
-            icon={icon}
-            name={p.schema.name}
-            description={p.schema.slogan}
-            text={p.schema.description}
-          />
-        );
-      });
+      const cards = productList.map((p) => (
+        <ProductCard
+          key={p.id}
+          link={`/${p.id}`}
+          icon={this.getIcon(p.schema)}
+          name={p.schema.name}
+          description={p.schema.slogan}
+          text={p.schema.description}
+        />
+      ));
       return cards;
     }; // renderCards()
 

@@ -32,11 +32,14 @@ class Product extends Component {
     Data.getData(this.props.match.params.id, this.setState.bind(this), 'data');
   }
 
+  /**
+   * Returns icon resource depending on data props
+   */
   getIcon() {
     const { data } = this.state;
     let result = data.logo; // Try to use "logo" property
-    if (!result) result = data.image; // If "logo" property is empty, try to use "image" property
-    if (Array.isArray(result)) [result] = result; // Use first image. Same as result = result[0]
+    if (!result) result = data.image; // If "logo" property is empty, use "image" property
+    if (Array.isArray(result)) [result] = result; // In case of array use only first image. Same as result = result[0]
     return result;
   }
 
