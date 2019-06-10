@@ -16,7 +16,7 @@ const capitalizeString = (s) => {
 /**
  * Build "all.json" file with array of all "/abc-xyz/schema.json" files
  */
-glob('**/schema.json', {}, (error, files) => {
+glob(`${__dirname}/**/schema.json`, {}, (error, files) => {
   const allObjects = [];
 
   if (error) {
@@ -27,12 +27,16 @@ glob('**/schema.json', {}, (error, files) => {
   files.map((fileName, index) => {
     console.log('Processing "%s" file...', fileName);
     const fileData = fs.readFileSync(fileName);
-    const newObject = JSON.parse(fileData);
-    // console.log(index, fileName, newObject);
+    const schema = JSON.parse(fileData);
+    // console.log(index, fileName, schema);
+
+    let id = fileName.substring(0, fileName.indexOf('/schema.json'));
+    id = id.substring(id.lastIndexOf('/') + 1, Number.MAX_VALUE);
+    // console.log(`id: ${id}`);
 
     allObjects.push({
-      id: fileName.substring(0, fileName.indexOf('/')),
-      schema: newObject,
+      id,
+      schema,
     });
 
     // Write generic "index.html" to product folder
@@ -41,21 +45,21 @@ glob('**/schema.json', {}, (error, files) => {
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>${newObject.name}</title>
+    <title>${schema.name}</title>
     <meta
       name="description"
-      content="${newObject.name} software product is created by Anton Karpenko (aka KARPOLAN)"
+      content="${schema.name} software product is created by Anton Karpenko (aka KARPOLAN)"
     />
   </head>
   <body>
-    <h1 id="name">${newObject.name}</h1>
+    <h1 id="name">${schema.name}</h1>
     <div>
-      <p id="desc">${newObject.slogan}</p>
-      <a id="link" href="${newObject.url}">More about ${newObject.name} software</a>
-      <p id="text">${newObject.description}</p>
+      <p id="desc">${schema.slogan}</p>
+      <a id="link" href="${schema.url}">More about ${schema.name} software</a>
+      <p id="text">${schema.description}</p>
     </div>
     <script type="application/ld+json">
-${JSON.stringify(newObject)}
+${JSON.stringify(schema)}
     </script>
   </body>
 <html>`;
@@ -69,7 +73,7 @@ ${JSON.stringify(newObject)}
   }); // files.map()
 
   // Write generic "all.json" to root folder
-  fs.writeFile('all.json', JSON.stringify(allObjects), (err) => {
+  fs.writeFile(`${__dirname}/all.json`, JSON.stringify(allObjects), (err) => {
     if (err) {
       console.error('fs.writeFile error: ', err);
       return false;
@@ -84,7 +88,7 @@ ${JSON.stringify(newObject)}
 /**
  * Build index.html and sitemap.xml files with links to all "/abc-xyz/" folders
  */
-glob('**/index.html', {}, (error, files) => {
+glob(`${__dirname}/**/index.html`, {}, (error, files) => {
   const htmlDataItems = []; // for '/data/index.html'
   const xmlDataItems = []; // for '/data/sitempa.xml'
   const xmlRootItems = []; // for '/sitempa.xml'
@@ -96,13 +100,14 @@ glob('**/index.html', {}, (error, files) => {
 
   files.map((fileName, index) => {
     console.log('Linking "%s" file...', fileName);
-    const link = fileName.substring(0, fileName.indexOf('/'));
-    if (link !== '') {
+    let id = fileName.substring(0, fileName.indexOf('/index.html'));
+    id = id.substring(id.lastIndexOf('/') + 1, Number.MAX_VALUE);
+    if (id !== 'data') {
       // Skipping root folder
-      const text = capitalizeString(link.replace(/-/g, ' '));
-      htmlDataItems.push(`<li><a href="${link}/">${text}</a></li>`);
-      xmlDataItems.push(`<url><loc>https://software.karpolan.com/data/${link}/</loc><priority>0.7</priority></url>`);
-      xmlRootItems.push(`<url><loc>https://software.karpolan.com/${link}</loc><priority>0.9</priority></url>`);
+      const text = capitalizeString(id.replace(/-/g, ' '));
+      htmlDataItems.push(`<li><a href="${id}/">${text}</a></li>`);
+      xmlDataItems.push(`<url><loc>https://software.karpolan.com/data/${id}/</loc><priority>0.7</priority></url>`);
+      xmlRootItems.push(`<url><loc>https://software.karpolan.com/${id}</loc><priority>0.9</priority></url>`);
     }
   }); // files.map()
 
@@ -120,7 +125,7 @@ ${htmlDataItems.join('\n')}
     </ul>
   </body>
 </html>`;
-  fs.writeFile('index.html', htmlContent, (err) => {
+  fs.writeFile(`${__dirname}/index.html`, htmlContent, (err) => {
     if (err) {
       console.error('fs.writeFile error: ', err);
       return false;
@@ -135,7 +140,7 @@ ${htmlDataItems.join('\n')}
 <url><loc>https://software.karpolan.com/data/</loc><priority>0.6</priority></url>
 ${xmlDataItems.join('\n')}
 </urlset>`;
-  fs.writeFile('sitemap.xml', xmlContent, (err) => {
+  fs.writeFile(`${__dirname}/sitemap.xml`, xmlContent, (err) => {
     if (err) {
       console.error('fs.writeFile error: ', err);
       return false;
@@ -152,7 +157,7 @@ ${xmlDataItems.join('\n')}
 <url><loc>https://software.karpolan.com/about</loc><priority>0.4</priority></url>
 ${xmlRootItems.join('\n')}
 </urlset>`;
-  fs.writeFile('../sitemap.xml', xmpRootSitemap, (err) => {
+  fs.writeFile(`${__dirname}/../sitemap.xml`, xmpRootSitemap, (err) => {
     if (err) {
       console.error('fs.writeFile error: ', err);
       return false;
