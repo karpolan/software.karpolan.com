@@ -43,18 +43,27 @@ const prouductDetails = (props) => {
       'outline-info',
     ];
 
-    const list = offers.map((item, index) => (
-      <Button
-        key={`button_${index}`}
-        className="product-button"
-        variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]}
-        href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {item.name}
-      </Button>
-    ));
+    const list = offers.map((item, index) => {
+      let openInNewWindowProps = {};
+      if (item.url && item.url.includes('//')) {
+        // Open only extarnal links in New Window
+        openInNewWindowProps = {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        };
+      }
+      return (
+        <Button
+          key={`button_${index}`}
+          className="product-button"
+          variant={BUTTON_VARIANTS[index % BUTTON_VARIANTS.length]}
+          href={item.url}
+          {...openInNewWindowProps}
+        >
+          {item.name}
+        </Button>
+      );
+    });
 
     return <ButtonToolbar>{list}</ButtonToolbar>;
   }; // renderOffers()

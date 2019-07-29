@@ -43,7 +43,7 @@
       "url": "/remote-desktop-control/",
       "seller": {
         "@type": "Organization",
-        "url": "http://remote-desktop-control.com",
+        "url": "/remote-desktop-control/",
         "name": "Remote Desktop Control"
       },
       "availability": "OnlineOnly",
@@ -56,23 +56,8 @@
       "url": "/remote-desktop-control/",
       "seller": {
         "@type": "Organization",
-        "url": "http://remote-desktop-control.com",
+        "url": "/remote-desktop-control/",
         "name": "Remote Desktop Control"
-      },
-      "availability": "OnlineOnly"
-    },
-    {
-      "@type": "Offer",
-      "name": "Download for PC",
-      "url": "/remote-desktop-control/",
-      "itemOffered": {
-        "@type": "SoftwareApplication",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Windows",
-        "screenshot": "http://remote-desktop-control.com/images/screenshot.png",
-        "downloadUrl": "http://remote-desktop-control.com/files/remote-desktop-control.exe",
-        "url": "http://remote-desktop-control.com",
-        "name": "Remote Desktop Control for PC"
       },
       "availability": "OnlineOnly"
     }
