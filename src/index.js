@@ -30,6 +30,22 @@ const App = (
       <meta name="application-name" content="Web application for software.karpolan.com" />
       <meta name="msapplication-TileColor" content="#00aba9" />
       <meta name="theme-color" content="#ffffff" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-233234-10"></script>
+      <script>{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-233234-10');
+      `}</script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>{`
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: 'ca-pub-1111097944989035',
+          enable_page_level_ads: true,
+        });
+      `}</script>
     </Helmet>
   </Router>
 );

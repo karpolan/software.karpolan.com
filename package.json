@@ -10,7 +10,8 @@
     "karpolan"
   ],
   "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
-  "_react_snap_not_working_when_homepage_is_set_homepage": "https://software.karpolan.com",
+  "_react_snap_not_working_when_homepage_is_not_empty___homepage": "https://software.karpolan.com",
+  "homepage": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/karpolan/software.karpolan.com"
@@ -30,9 +31,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap",
-    "build-static": "react-scripts build && react-snap",
-    "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build-static",
+    "_postbuild": "react-snap",
+    "static": "react-snap",
+    "build-static": "cross-env NODE_ENV=production react-scripts build && react-snap",
+    "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build",
     "test": "react-scripts test"
   },
   "eslintConfig": {
