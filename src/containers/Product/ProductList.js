@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { CardColumns } from 'react-bootstrap';
 import { ProductCard, Spinner } from '../../components';
 import { Data } from '../../storage';
@@ -69,6 +70,16 @@ class ProductList extends Component {
         <article className={`product-list ${className}`}>
           <CardColumns>{renderCards(data)}</CardColumns>
         </article>
+        <Helmet>
+          <title>Software Products by KARPOLAN</title>
+          <meta
+            name="description"
+            content="Products, projects, programs, tools, utilities and other software created by Anton Karpenko (aka KARPOLAN) personally or with his direct participation."
+          />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+        </Helmet>
       </main>
     );
   }

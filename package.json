@@ -1,6 +1,6 @@
 {
   "name": "software.karpolan.com",
-  "version": "0.8.39",
+  "version": "0.9.41",
   "description": "Web application for software.karpolan.com",
   "keywords": [
     "react",
@@ -23,12 +23,14 @@
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "build-static": "react-scripts build && react-snap",
     "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build-static",
     "test": "react-scripts test"

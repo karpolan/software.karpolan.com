@@ -2,6 +2,7 @@ import React from 'react';
 //import ReactDOM from 'react-dom';
 import { hydrate, render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import * as serviceWorker from './serviceWorker';
 import DefaultRouter from './router';
@@ -19,6 +20,20 @@ const App = (
       <DefaultRouter />
     </Content>
     <Footer />
+    {/* !!! Don't use any <link rel="shortcut icon"... here, it disallow changing of favicons for products !!! */}
+    <Helmet>
+      <link rel="manifest" href="/site.webmanifest" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+      <link _rel="shortcut icon" href="/favicon.ico" />
+      <link _rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+      <link _rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+      <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="apple-mobile-web-app-title" content="Web application for software.karpolan.com" />
+      <meta name="application-name" content="Web application for software.karpolan.com" />
+      <meta name="msapplication-TileColor" content="#00aba9" />
+      <meta name="theme-color" content="#ffffff" />
+    </Helmet>
   </Router>
 );
 

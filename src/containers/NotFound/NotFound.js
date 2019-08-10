@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './NotFound.css';
 
 /**
@@ -27,6 +28,10 @@ function NotFound() {
           </div>
         </div>
       </div>
+      <Helmet>
+        <title>Error - Page not found or data incorrect</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Helmet>
     </main>
   );
 }

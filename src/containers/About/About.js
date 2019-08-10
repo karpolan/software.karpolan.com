@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { Consts } from '../../storage';
 import { SocialList } from '../../components';
 
@@ -167,6 +168,14 @@ class About extends Component {
             </div>
           </div>
         </section>
+        <Helmet>
+          <title>About Software Engineer</title>
+          <meta
+            name="description"
+            content="Anton Karpenko (aka KARPOLAN) is software engineer since 1994, participated in creation of many different software products."
+          />
+          <link rel="shortcut icon" href="/favicon.ico" />
+        </Helmet>
       </>
     );
   }
