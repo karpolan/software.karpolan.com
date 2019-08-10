@@ -4,9 +4,9 @@ import { Image, Carousel, Container, Col, Row, Button, ButtonToolbar } from 'rea
 import './Product.css';
 
 /**
- * Renders Product Details page using props as data
+ * Renders the Product Details "full page" using props as data
  */
-const prouductDetails = (props) => {
+const ProuductDetails = (props) => {
   const { name, icon, text, description, dates, images, offers } = props;
 
   /**
@@ -99,7 +99,7 @@ const prouductDetails = (props) => {
   );
 };
 
-prouductDetails.propTypes = {
+ProuductDetails.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -109,11 +109,11 @@ prouductDetails.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.object),
 };
 
-prouductDetails.defaultProps = {
+ProuductDetails.defaultProps = {
   text: '',
   dates: null,
   images: null,
   offers: null,
 };
 
-export default prouductDetails;
+export default ProuductDetails;

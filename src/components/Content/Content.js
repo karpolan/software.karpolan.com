@@ -4,19 +4,19 @@ import PropTypes from 'prop-types';
 /**
  * Wrapper for content modules (articles, sidebar, etc.)
  */
-function content(props) {
+function Content(props) {
   const { className = '', children } = props;
   return <div className={`container py-3 ${className}`}>{children}</div>;
 }
 
-content.propTypes = {
+Content.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 };
 
-content.defaultProps = {
+Content.defaultProps = {
   className: '',
   children: null,
 };
 
-export default content;
+export default Content;

@@ -5,7 +5,7 @@ import { Product, ProductList, NotFound, Contact, About } from '../containers';
 /**
  * Default Router of application
  */
-const router = () => {
+const Router = () => {
   return (
     <Switch>
       <Route exact path="/" component={ProductList} />
@@ -23,4 +23,4 @@ const router = () => {
   );
 };
 
-export default router;
+export default Router;

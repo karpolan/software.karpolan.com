@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { SocialList, ContactForm } from '../../components';
 
+/**
+ * Renders Contact view with Form and social links at "/contact/" url.
+ */
 class Contact extends Component {
   static propTypes = {
     className: PropTypes.string,
@@ -48,9 +52,17 @@ class Contact extends Component {
             </div>
           </div>
         </article>
+        <Helmet>
+          <title>Contact Software Engineer</title>
+          <meta
+            name="description"
+            content="Contact Anton Karpenko (aka KARPOLAN) about software development, software production, or software projects listed on this site."
+          />
+          <link rel="shortcut icon" href="/favicon.ico" />
+        </Helmet>
       </>
     );
   }
-} // className BootstrapContactForm
+}
 
 export default Contact;

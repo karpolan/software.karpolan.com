@@ -4,24 +4,17 @@ import { Link } from 'react-router-dom';
 import { Consts } from '../../storage';
 
 /**
- * Footer shows different content depending on screen size.
+ * Renedrs the Footer with different content depending on screen size.
  */
-const footer = (props) => {
-  const { className, forceShow } = props;
-
-  const name = props.name || Consts.name; //  'Anton Karpenko';
-  const linkedin = props.linkedin || Consts.linkedin;
-  const facebook = props.facebook || Consts.facebook;
-  const twitter = props.twitter || Consts.twitter;
-  const github = props.github || Consts.github;
-
+const Footer = (props) => {
+  const { className, forceShow, name, linkedin, facebook, twitter, github } = props;
   const classShowHideSm = forceShow ? 'd-block' : 'd-none d-sm-block';
   const classShowHideMd = forceShow ? 'd-block' : 'd-none d-md-block';
   return (
     <footer className={`footer ${className}`}>
       <div className={`container small pt-3 bg-light ${classShowHideSm}`}>
         <div className="row">
-          <div className={`col-md-2 ${classShowHideMd}`}>
+          <div className={`col-md-3 ${classShowHideMd}`}>
             <ul className="list-unstyled">
               <li className="">
                 <Link to="/" title={`Software created by ${name}`}>
@@ -41,7 +34,7 @@ const footer = (props) => {
             </ul>
           </div>
 
-          <div className={`col-md-2 ${classShowHideMd}`}>
+          {/* <div className={`col-md-2 ${classShowHideMd}`}>
             <ul className="list-unstyled">
               <li className="">
                 <a
@@ -69,9 +62,9 @@ const footer = (props) => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
-          <div className={`col-md-2 ${classShowHideMd}`}>
+          <div className={`col-md-3 ${classShowHideMd}`}>
             <ul className="list-unstyled">
               <li className="">
                 <a
@@ -139,14 +132,24 @@ const footer = (props) => {
   );
 };
 
-footer.propTypes = {
+Footer.propTypes = {
   className: PropTypes.string,
   forceShow: PropTypes.bool,
+  name: PropTypes.string,
+  linkedin: PropTypes.string,
+  facebook: PropTypes.string,
+  twitter: PropTypes.string,
+  github: PropTypes.string,
 };
 
-footer.defaultProps = {
+Footer.defaultProps = {
   className: '',
   forceShow: false,
+  name: Consts.name, // 'Anton Karpenko'
+  linkedin: Consts.linkedin,
+  facebook: Consts.facebook,
+  twitter: Consts.twitter,
+  github: Consts.github,
 };
 
-export default footer;
+export default Footer;

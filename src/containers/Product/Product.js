@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { ProductDetails, Spinner } from '../../components';
 import { Data } from '../../storage';
 
@@ -60,14 +61,14 @@ class Product extends Component {
     const { error, loaded, id, data } = this.state;
     const { className } = this.props;
 
-    // Redirect to NotFound if data loading have been failed
+    // Redirect to NotFound if the data loading have been failed
     if (error === true) return <Redirect to="/404" />;
 
-    // Show only Spinner if data was not loaded yet
+    // Show only the Spinner if data was not loaded yet
     if (loaded === false) return <Spinner />;
 
     // Create data object that will be passed as props to the ProductDetails component
-    const productData = {
+    const propsToRender = {
       id,
       icon: this.getIcon(),
       name: data.name,
@@ -81,9 +82,15 @@ class Product extends Component {
     return (
       <main>
         <article className={`product ${className}`}>
-          <ProductDetails {...productData} />
+          <ProductDetails {...propsToRender} />
         </article>
         <script type="application/ld+json">{JSON.stringify(data)}</script>
+        <Helmet>
+          <title>{propsToRender.name} - Software by KARPOLAN</title>
+          <meta name="description" content={`${propsToRender.name} - ${propsToRender.description}`} />
+          <meta name="author" content="Anton Karpenko" />
+          <link rel="shortcut icon" href={propsToRender.icon} />
+        </Helmet>
       </main>
     );
   }

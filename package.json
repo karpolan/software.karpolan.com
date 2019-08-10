@@ -1,6 +1,6 @@
 {
   "name": "software.karpolan.com",
-  "version": "0.8.37",
+  "version": "0.9.41",
   "description": "Web application for software.karpolan.com",
   "keywords": [
     "react",
@@ -10,28 +10,30 @@
     "karpolan"
   ],
   "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
-  "homepage": "https://software.karpolan.com",
+  "_react_snap_not_working_when_homepage_is_set_homepage": "https://software.karpolan.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/karpolan/software.karpolan.com"
   },
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0",
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "bootstrap": "^4.3.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.10",
-    "react-dom": "^16.8.6",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.11",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "product": "node ./public/data/combine.js && cross-env NODE_ENV=production react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "postbuild": "react-snap",
+    "build-static": "react-scripts build && react-snap",
+    "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build-static",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,13 +47,14 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "eslint": "5.12.0",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-react": "^7.14.3",
     "glob": "^7.1.4",
     "node-sass": "^4.12.0",
-    "prettier": "^1.17.1",
-    "pretty-quick": "^1.11.0"
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "react-snap": "^1.23.0"
   }
 }
