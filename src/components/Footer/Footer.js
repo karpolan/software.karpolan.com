@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Consts } from '../../storage';
 
 /**
- * Rendrs the Footer with different content depending on screen size.
+ * Renedrs the Footer with different content depending on screen size.
  */
 const Footer = (props) => {
   const { className, forceShow, name, linkedin, facebook, twitter, github } = props;
