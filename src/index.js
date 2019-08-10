@@ -39,13 +39,13 @@ const App = (
         gtag('js', new Date());
         gtag('config', 'UA-233234-10');
       `}</script>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <script>{`
         (adsbygoogle = window.adsbygoogle || []).push({
           google_ad_client: 'ca-pub-1111097944989035',
           enable_page_level_ads: true,
         });
-      `}</script>
+      `}</script> */}
     </Helmet>
   </Router>
 );
