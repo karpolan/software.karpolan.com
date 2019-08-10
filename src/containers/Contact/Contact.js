@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { SocialList, ContactForm } from '../../components';
 
+/**
+ * Renders Contact view with Form and social links at "/contact/" url.
+ */
 class Contact extends Component {
   static propTypes = {
     className: PropTypes.string,
@@ -51,6 +54,6 @@ class Contact extends Component {
       </>
     );
   }
-} // className BootstrapContactForm
+}
 
 export default Contact;

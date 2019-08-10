@@ -42,10 +42,10 @@ class ProductList extends Component {
     const { error, loaded, data } = this.state;
     const { className } = this.props;
 
-    // Redirect to NotFound if data loading have been failed
+    // Redirect to NotFound if the data loading have been failed
     if (error === true) return <Redirect to="/404" />;
 
-    // Show only Spinner if data was not loaded yet
+    // Show only the Spinner if data was not loaded yet
     if (loaded === false) return <Spinner />;
 
     const renderCards = (productList) => {

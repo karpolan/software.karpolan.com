@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Form, Button, Row, Col, Alert } from 'react-bootstrap';
-import Spinner from '../Spinner/Spinner';
+import DefaultSpinner from '../Spinner/Spinner';
 
 /**
  * Contact form using React-Bootstrap https://react-bootstrap.github.io
@@ -55,7 +55,7 @@ const rbContactForm = (props) => {
             </Col>
           </Form.Group>
 
-          {formSubmitted && <Spinner />}
+          {formSubmitted && <DefaultSpinner />}
           {emailSent && <Alert variant="success">Your message has been sent successfully</Alert>}
 
           <div className="text-right">

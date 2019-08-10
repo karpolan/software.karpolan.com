@@ -60,14 +60,14 @@ class Product extends Component {
     const { error, loaded, id, data } = this.state;
     const { className } = this.props;
 
-    // Redirect to NotFound if data loading have been failed
+    // Redirect to NotFound if the data loading have been failed
     if (error === true) return <Redirect to="/404" />;
 
-    // Show only Spinner if data was not loaded yet
+    // Show only the Spinner if data was not loaded yet
     if (loaded === false) return <Spinner />;
 
     // Create data object that will be passed as props to the ProductDetails component
-    const productData = {
+    const productDetailsProps = {
       id,
       icon: this.getIcon(),
       name: data.name,
@@ -81,7 +81,7 @@ class Product extends Component {
     return (
       <main>
         <article className={`product ${className}`}>
-          <ProductDetails {...productData} />
+          <ProductDetails {...productDetailsProps} />
         </article>
         <script type="application/ld+json">{JSON.stringify(data)}</script>
       </main>

@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { Card, Image, Button } from 'react-bootstrap';
 
 /**
- * Renders single Product Card for Product List
+ * Renders a single Product Card for the Product List view.
  */
-const productCard = (props) => {
+const ProductCard = (props) => {
   const { link, icon, name, description } = props;
   const content = description; // + ` ${text}`;
 
@@ -32,7 +32,7 @@ const productCard = (props) => {
   );
 };
 
-productCard.propTypes = {
+ProductCard.propTypes = {
   link: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -40,9 +40,9 @@ productCard.propTypes = {
   // text: PropTypes.string,
 };
 
-productCard.defaultProps = {
+ProductCard.defaultProps = {
   description: '',
   // text: '',
 };
 
-export default productCard;
+export default ProductCard;

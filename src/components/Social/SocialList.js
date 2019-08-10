@@ -5,18 +5,8 @@ import { Consts } from '../../storage';
 /**
  * Renders <ul> with social icons
  */
-function socialList(props) {
-  const { className } = props;
-
-  const name = props.name || Consts.name; //  'Anton Karpenko';
-  const linkedin = props.linkedin || Consts.linkedin;
-  const facebook = props.facebook || Consts.facebook;
-  const twitter = props.twitter || Consts.twitter;
-  const youtube = props.youtube || Consts.youtube;
-  const instagram = props.instagram || Consts.instagram;
-  const github = props.github || Consts.github;
-  const slideshare = props.slideshare || Consts.slideshare;
-
+function SocialList(props) {
+  const { className, name, linkedin, facebook, twitter, youtube, instagram, github, slideshare } = props;
   return (
     <ul className={`social list-unstyled list-inline text-center ${className}`}>
       <li className="list-inline-item">
@@ -58,12 +48,28 @@ function socialList(props) {
   );
 }
 
-socialList.propTypes = {
+SocialList.propTypes = {
   className: PropTypes.string,
+  name: PropTypes.string,
+  linkedin: PropTypes.string,
+  facebook: PropTypes.string,
+  twitter: PropTypes.string,
+  youtube: PropTypes.string,
+  instagram: PropTypes.string,
+  github: PropTypes.string,
+  slideshare: PropTypes.string,
 };
 
-socialList.defaultProps = {
+SocialList.defaultProps = {
   className: '',
+  name: Consts.name, //'Anton Karpenko',
+  linkedin: Consts.linkedin,
+  facebook: Consts.facebook,
+  twitter: Consts.twitter,
+  youtube: Consts.youtube,
+  instagram: Consts.instagram,
+  github: Consts.github,
+  slideshare: Consts.slideshare,
 };
 
-export default socialList;
+export default SocialList;

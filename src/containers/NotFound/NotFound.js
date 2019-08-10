@@ -5,7 +5,7 @@ import './NotFound.css';
 /**
  * Renders 404 error page
  */
-function notFound() {
+function NotFound() {
   return (
     <main>
       <div className="not-found row">
@@ -31,4 +31,4 @@ function notFound() {
   );
 }
 
-export default notFound;
+export default NotFound;

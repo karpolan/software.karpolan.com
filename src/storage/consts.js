@@ -1,6 +1,7 @@
 export const name = 'Anton Karpenko';
 export const email = 'i@karpolan.com';
-export const phone = '+38 093 394-48-15';
+export const phone = '+421 919 321 977';
+export const address = 'Nivy, Ružinov, Bratislava, SLOVAKIA';
 export const linkedin = 'https://www.linkedin.com/in/karpolan/';
 export const facebook = 'https://www.facebook.com/KarpolanOfficial/';
 export const twitter = 'https://twitter.com/karpolan';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function underConstruction() {
+function UnderConstruction() {
   return (
     <>
       <div className="container">
@@ -13,4 +13,4 @@ function underConstruction() {
   );
 }
 
-export default underConstruction;
+export default UnderConstruction;
