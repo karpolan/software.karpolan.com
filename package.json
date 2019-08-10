@@ -11,7 +11,7 @@
   ],
   "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
   "_react_snap_not_working_when_homepage_is_not_empty___homepage": "https://software.karpolan.com",
-  "homepage": "",
+  "homepage": "https://software.karpolan.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/karpolan/software.karpolan.com"
