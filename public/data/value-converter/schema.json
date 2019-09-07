@@ -1,5 +1,5 @@
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Product",
 
   "name": "Value Converter",
@@ -19,7 +19,7 @@
     "/data/value-converter/screenshot-mass.png",
     "/data/value-converter/screenshot-triangle.png",
     "/data/value-converter/screenshot-trigonometry.png",
-    "http://www.abf-soft.com/value-converter/images/screenshot.gif"
+    "/data/value-converter/screenshot.gif"
   ],
 
   "productionDate": "2001",
