@@ -1,6 +1,6 @@
 {
   "name": "software.karpolan.com",
-  "version": "0.9.43",
+  "version": "0.9.45",
   "description": "Web application for software.karpolan.com",
   "keywords": [
     "react",
@@ -34,6 +34,7 @@
     "postbuild": "react-snap",
     "static": "react-snap",
     "build-static": "cross-env NODE_ENV=production react-scripts build && react-snap",
+    "update": "node ./public/data/combine.js",
     "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build",
     "test": "react-scripts test"
   },

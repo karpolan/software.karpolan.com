@@ -136,7 +136,7 @@ ${htmlDataItems.join('\n')}
 
   // Create Data Sitemap "/data/sitemap.xml"
   const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://software.karpolan.com/data/</loc><priority>0.6</priority></url>
 ${xmlDataItems.join('\n')}
 </urlset>`;
@@ -151,7 +151,7 @@ ${xmlDataItems.join('\n')}
 
   // Create Root sitemap "/sitemap.xml"
   const xmpRootSitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://software.karpolan.com</loc><priority>1.0</priority></url>
 <url><loc>https://software.karpolan.com/contact</loc><priority>0.3</priority></url>
 <url><loc>https://software.karpolan.com/about</loc><priority>0.4</priority></url>
