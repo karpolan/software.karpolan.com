@@ -73,12 +73,12 @@ class ContactForm extends Component {
     /*
 		emailjs.init("user_f84LhJ9n84Exjm3QTSbeF");
 		var service_id = "default_service";
-		var template_id = "template_LD76xSO8_clone";
+		var template_id = "template_software";
 		emailjs.send(service_id, template_id, template_params);
 		*/
     window.emailjs.init('user_f84LhJ9n84Exjm3QTSbeF');
     window.emailjs
-      .send('default_service', 'template_LD76xSO8_clone', {
+      .send('default_service', 'template_software', {
         name,
         email,
         message,
