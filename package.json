@@ -32,8 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "react-snap",
-    "build-static": "react-scripts build && react-snap",
-    "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build-static",
+    "static": "react-snap",
+    "build-static": "cross-env NODE_ENV=production react-scripts build && react-snap",
+    "product": "node ./public/data/combine.js && cross-env NODE_ENV=production npm run build",
     "test": "react-scripts test"
   },
   "eslintConfig": {
