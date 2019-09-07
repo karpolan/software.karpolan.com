@@ -149,7 +149,7 @@ Footer.defaultProps = {
   linkedin: Consts.linkedin,
   facebook: Consts.facebook,
   twitter: Consts.twitter,
-  github: Consts.github,
+  github: 'https://github.com/karpolan/software.karpolan.com', // Consts.github,
 };
 
 export default Footer;
