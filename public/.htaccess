@@ -1,37 +1,12 @@
-	Options -MultiViews
-	RewriteEngine On
-	DirectoryIndex index.html index.htm index.php
+Options -MultiViews
+RewriteEngine On
+DirectoryIndex index.html index.htm index.php
 
 # Redirect //. to //www.
 #	RewriteCond %{HTTP_HOST} !^www\. [NC]
 #	RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect http://. to https://.
-	RewriteCond %{HTTP:X-Forwarded-Proto} !https
-	RewriteCond %{HTTPS} off
-	RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Serve root index.html for unknown files and folders only
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^ index.html [QSA,L]
-
-
-# from https://gist.github.com/alexsasharegan/173878f9d67055bfef63449fa7136042
-#  RewriteEngine On
-#  RewriteBase /
-#  RewriteRule ^index\.html$ - [L]
-#  RewriteCond %{REQUEST_FILENAME} !-f
-#  RewriteCond %{REQUEST_FILENAME} !-d
-#  RewriteCond %{REQUEST_FILENAME} !-l
-#  RewriteRule . /index.html [L]
-
-
-
-# Serve index.html by default (for unknown files and folders)
-#	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-#	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-#	RewriteRule ^ - [L]
-
-
-# Serve index.html by default (for unknown files and folders)
-#	RewriteRule ^ /index.html [L]
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
