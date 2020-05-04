@@ -17,20 +17,10 @@
     "url": "https://github.com/karpolan/software.karpolan.com"
   },
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0",
-    "bootstrap": "^4.4.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.0.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1"
-  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "prebuild": "npm run update-data",
+    "build": "cross-env NODE_ENV=production react-scripts build",
     "postbuild": "react-snap",
     "static": "react-snap",
     "build-static": "cross-env NODE_ENV=production react-scripts build && react-snap",
@@ -47,6 +37,17 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1"
+  },
   "devDependencies": {
     "cross-env": "^5.2.1",
     "eslint": "^6.6.0",
