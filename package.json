@@ -1,7 +1,9 @@
 {
   "name": "software.karpolan.com",
-  "version": "1.0.55",
+  "version": "1.0.57",
   "description": "Web application for software.karpolan.com",
+  "private": true,
+  "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
   "keywords": [
     "react",
     "website",
@@ -9,14 +11,12 @@
     "product",
     "karpolan"
   ],
-  "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
   "homepage": "/",
   "_react_snap_not_working_when_homepage_is_set_homepage": "https://software.karpolan.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/karpolan/software.karpolan.com"
   },
-  "private": true,
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "npm run update-data",
