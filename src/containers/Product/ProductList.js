@@ -55,7 +55,7 @@ class ProductList extends Component {
       const cards = productList.map((p) => (
         <ProductCard
           key={p.id}
-          link={`/${p.id}`}
+          link={`/${p.id}/`}
           icon={this.getIcon(p.schema)}
           name={p.schema.name}
           description={p.schema.slogan}
