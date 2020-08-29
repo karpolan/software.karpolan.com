@@ -20,10 +20,10 @@ const rbHeader = ({ className }) => {
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar" className="justify-content-end">
           <Nav className="">
-            <Nav.Link href="#" as={NavLink} to="/contact/">
+            <Nav.Link href="#" as={NavLink} to="/contact/index.html">
               Contact
             </Nav.Link>
-            <Nav.Link href="#" as={NavLink} to="/about/">
+            <Nav.Link href="#" as={NavLink} to="/about/index.html">
               About
             </Nav.Link>
           </Nav>
