@@ -18,7 +18,7 @@ const Router = () => {
       <Route path="/404" component={NotFound} />
 
       <Route path="/:id" component={Product} />
-      <Route path="*" component={NotFound} />
+      <Route component={NotFound} />
     </Switch>
   );
 };
