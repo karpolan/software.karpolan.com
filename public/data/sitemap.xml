@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://software.karpolan.com/data/</loc><priority>0.6</priority></url>
-<url><loc>https://software.karpolan.com/data/aobmen/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/auto-mute/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/caps-lock-indicator/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/keyboard-leds/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/lens-magnifying-glass/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/missing-buttons/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/num-lock-indicator/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/ochepyatka/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/outlook-backup/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/outlook-express-backup/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/remote-desktop-control/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/scroll-lock-indicator/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/sea-battle/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/touchpad-blocker/</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/value-converter/</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/index.html</loc><priority>0.6</priority></url>
+<url><loc>https://software.karpolan.com/data/aobmen/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/auto-mute/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/caps-lock-indicator/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/keyboard-leds/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/lens-magnifying-glass/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/missing-buttons/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/num-lock-indicator/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/ochepyatka/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/outlook-backup/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/outlook-express-backup/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/remote-desktop-control/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/scroll-lock-indicator/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/sea-battle/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/touchpad-blocker/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/value-converter/index.html</loc><priority>0.7</priority></url>
 </urlset>

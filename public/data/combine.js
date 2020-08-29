@@ -81,7 +81,7 @@ ${JSON.stringify(schema)}
     return true;
   }); // fs.writeFile()
 
-  console.log('All "schema.json" files sucessfuly combined into "all.json" file');
+  console.log('All "schema.json" files successfully combined into "all.json" file');
   return true;
 }); // glob('**/schema.json')
 
@@ -105,9 +105,11 @@ glob(`${__dirname}/**/index.html`, {}, (error, files) => {
     if (id !== 'data') {
       // Skipping root folder
       const text = capitalizeString(id.replace(/-/g, ' '));
-      htmlDataItems.push(`<li><a href="${id}/">${text}</a></li>`);
-      xmlDataItems.push(`<url><loc>https://software.karpolan.com/data/${id}/</loc><priority>0.7</priority></url>`);
-      xmlRootItems.push(`<url><loc>https://software.karpolan.com/${id}</loc><priority>0.9</priority></url>`);
+      htmlDataItems.push(`<li><a href="${id}/index.html">${text}</a></li>`);
+      xmlDataItems.push(
+        `<url><loc>https://software.karpolan.com/data/${id}/index.html</loc><priority>0.7</priority></url>`
+      );
+      xmlRootItems.push(`<url><loc>https://software.karpolan.com/${id}/index.html</loc><priority>0.9</priority></url>`);
     }
   }); // files.map()
 
@@ -137,7 +139,7 @@ ${htmlDataItems.join('\n')}
   // Create Data Sitemap "/data/sitemap.xml"
   const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://software.karpolan.com/data/</loc><priority>0.6</priority></url>
+<url><loc>https://software.karpolan.com/data/index.html</loc><priority>0.6</priority></url>
 ${xmlDataItems.join('\n')}
 </urlset>`;
   fs.writeFile(`${__dirname}/sitemap.xml`, xmlContent, (err) => {
@@ -153,8 +155,9 @@ ${xmlDataItems.join('\n')}
   const xmpRootSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://software.karpolan.com</loc><priority>1.0</priority></url>
-<url><loc>https://software.karpolan.com/contact</loc><priority>0.3</priority></url>
-<url><loc>https://software.karpolan.com/about</loc><priority>0.4</priority></url>
+<url><loc>https://software.karpolan.com/index.html</loc><priority>1.0</priority></url>
+<url><loc>https://software.karpolan.com/contact/index.html</loc><priority>0.3</priority></url>
+<url><loc>https://software.karpolan.com/about/index.html</loc><priority>0.4</priority></url>
 ${xmlRootItems.join('\n')}
 </urlset>`;
   fs.writeFile(`${__dirname}/../sitemap.xml`, xmpRootSitemap, (err) => {
