@@ -8,23 +8,6 @@ import { SocialList } from '../../components';
  * Renders About view with photo, brief intro, contact information and social links at "/about/" url.
  */
 class About extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-    name: PropTypes.string,
-    email: PropTypes.string,
-    phone: PropTypes.string,
-    address: PropTypes.string,
-  };
-
-  static defaultProps = {
-    className: '',
-    name: Consts.name, // 'Anton Karpenko';
-    email: Consts.email, // 'i@karpolan.com';
-    phone: Consts.phone, // '+421 919 321 977';
-    address: Consts.address, // 'Nivy, Ružinov, Bratislava, SLOVAKIA';
-  };
-
-  /* global process, window */
   render() {
     const urlPicture = `${process.env.PUBLIC_URL}/img/about/`;
     const domain = window.location.hostname.toUpperCase();
@@ -32,6 +15,17 @@ class About extends Component {
     const { name, email, phone, address } = this.props;
     return (
       <>
+        <Helmet>
+          <title>About Software Engineer</title>
+          <meta
+            name="description"
+            content={`Anton Karpenko (aka KARPOLAN) is software engineer since 1994, 
+              participated in creation of many different software products.`}
+          />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="canonical" href="https://software.karpolan.com/about/index.html" />
+        </Helmet>
+
         <main>
           <div className={`row about about-main ${className}`}>
             <div className="col-md-6 text-center">
@@ -168,17 +162,25 @@ class About extends Component {
             </div>
           </div>
         </section>
-        <Helmet>
-          <title>About Software Engineer</title>
-          <meta
-            name="description"
-            content="Anton Karpenko (aka KARPOLAN) is software engineer since 1994, participated in creation of many different software products."
-          />
-          <link rel="shortcut icon" href="/favicon.ico" />
-        </Helmet>
       </>
     );
   }
 }
+
+About.propTypes = {
+  className: PropTypes.string,
+  name: PropTypes.string,
+  email: PropTypes.string,
+  phone: PropTypes.string,
+  address: PropTypes.string,
+};
+
+About.defaultProps = {
+  className: '',
+  name: Consts.name, // 'Anton Karpenko';
+  email: Consts.email, // 'i@karpolan.com';
+  phone: Consts.phone, // '+421 919 321 977';
+  address: Consts.address, // 'Nivy, Ružinov, Bratislava, SLOVAKIA';
+};
 
 export default About;

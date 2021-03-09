@@ -10,19 +10,15 @@ import { Data } from '../../storage';
  * Renders list of all products from "/data/" folder
  */
 class ProductList extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
+  constructor(props) {
+    super(props);
 
-  static defaultProps = {
-    className: '',
-  };
-
-  state = {
-    error: false,
-    loaded: false,
-    data: {},
-  };
+    this.state = {
+      error: false,
+      loaded: false,
+      data: {},
+    };
+  }
 
   componentDidMount() {
     // Load list of products form "/data/" folder into "data" state
@@ -66,23 +62,35 @@ class ProductList extends Component {
     }; // renderCards()
 
     return (
-      <main>
-        <article className={`product-list ${className}`}>
-          <CardColumns>{renderCards(data)}</CardColumns>
-        </article>
+      <>
         <Helmet>
           <title>Software Products by KARPOLAN</title>
           <meta
             name="description"
-            content="Products, projects, programs, tools, utilities and other software created by Anton Karpenko (aka KARPOLAN) personally or with his direct participation."
+            content={`Products, projects, programs, tools, utilities and other software created by 
+            Anton Karpenko (aka KARPOLAN) personally or with his direct participation.`}
           />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+          <link rel="canonical" href="https://software.karpolan.com" />
         </Helmet>
-      </main>
+        <main>
+          <article className={`product-list ${className}`}>
+            <CardColumns>{renderCards(data)}</CardColumns>
+          </article>
+        </main>
+      </>
     );
   }
 }
+
+ProductList.propTypes = {
+  className: PropTypes.string,
+};
+
+ProductList.defaultProps = {
+  className: '',
+};
 
 export default ProductList;
