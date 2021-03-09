@@ -3,16 +3,14 @@ import React from 'react';
 import { hydrate, render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-
-import * as serviceWorker from './serviceWorker';
 import DefaultRouter from './router';
 import { Header, Footer, Content } from './components';
-
 // import './index.css';
 import 'bootstrap/dist/css/bootstrap.css'; // Standard Bootstrap
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './social-colors.css';
 
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 const App = (
@@ -65,9 +63,8 @@ if (rootElement.hasChildNodes()) {
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-// serviceWorker.unregister();
-serviceWorker.register();
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
