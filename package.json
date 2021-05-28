@@ -1,6 +1,6 @@
 {
   "name": "software.karpolan.com",
-  "version": "1.1.63",
+  "version": "1.1.65",
   "description": "Web application for software.karpolan.com",
   "private": true,
   "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
@@ -52,7 +52,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "cross-env": "latest",
+    "cross-env": "^7.0.3",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
