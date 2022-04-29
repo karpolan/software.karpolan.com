@@ -72,7 +72,7 @@ class ContactForm extends Component {
         message,
       })
       .then(() => {
-        console.log('sendContactEmail() succesful');
+        console.log('sendContactEmail() successful');
         this.setState({
           emailSent: true,
           message: '',

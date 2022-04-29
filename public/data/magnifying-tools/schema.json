@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+
+  "name": "Magnifying Tools",
+  "alternateName": "Magnifying glass",
+  "slogan": "Graphic tool for viewing magnified screen areas",
+  "description": "A set of useful graphics tools for viewing the screen area in different zooms. Each tool has its own unique behavior and usability. All tools supplement each other and allow designers and people with poor eyesight to work with computers better.",
+
+  "url": "http://www.abf-soft.com/magnifying-tools.shtml",
+  "logo": "/data/magnifying-tools/icon.gif",
+  "image": [
+    "/data/magnifying-tools/eye.gif",
+    "/data/magnifying-tools/lens.gif",
+    "/data/magnifying-tools/magnifier.gif"
+  ],
+
+  "category": "Software",
+  "mpn": "16",
+  "sku": "mt1x",
+
+  "productionDate": "2002",
+  "releaseDate": "2006",
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "ratingCount": "65535"
+  },
+
+  "brand": {
+    "@type": "Organization",
+    "url": "https://karpolan.com",
+    "email": "software@karpolan.com",
+    "name": "KARPOLAN"
+  },
+
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Buy",
+      "url": "http://www.abf-soft.com/magnifying-tools.shtml",
+      "seller": {
+        "@type": "Organization",
+        "url": "http://www.abf-soft.com",
+        "name": "ABF software, Inc."
+      },
+      "availability": "OnlineOnly",
+      "priceCurrency": "USD",
+      "price": "29.95"
+    },
+    {
+      "@type": "Offer",
+      "name": "Download",
+      "url": "http://www.abf-soft.com/magnifying-tools.shtml",
+      "seller": {
+        "@type": "Organization",
+        "url": "http://www.abf-soft.com",
+        "name": "ABF software, Inc."
+      },
+      "availability": "OnlineOnly",
+      "priceCurrency": "USD",
+      "price": "15"
+    },
+    {
+      "@type": "Offer",
+      "name": "Download for PC",
+      "url": "https://www.abf-soft.com/magnifying-tools/data/abfMagnifyingToolsInstall.exe",
+      "itemOffered": {
+        "@type": "SoftwareApplication",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Windows",
+        "screenshot": "/data/magnifying-tools/magnifier.gif",
+        "downloadUrl": "https://www.abf-soft.com/magnifying-tools/data/abfMagnifyingToolsInstall.exe",
+        "url": "http://www.abf-soft.com/magnifying-tools.shtml",
+        "name": "Magnifying Tools for PC"
+      },
+      "availability": "OnlineOnly",
+      "priceCurrency": "USD",
+      "price": "0"
+    }
+  ]
+}

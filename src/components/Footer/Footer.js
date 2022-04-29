@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Consts } from '../../storage';
 
 /**
- * Renedrs the Footer with different content depending on screen size.
+ * Renders the Footer with different content depending on screen size.
  */
 const Footer = (props) => {
   const { className, forceShow, name, linkedin, facebook, twitter, github } = props;
@@ -16,19 +16,19 @@ const Footer = (props) => {
         <div className="row">
           <div className={`col-md-3 ${classShowHideMd}`}>
             <ul className="list-unstyled">
-              <li className="">
+              <li>
                 <Link to="/" title={`Software created by ${name}`}>
                   Software
                 </Link>
               </li>
-              <li className="">
+              <li>
                 <a href="https://websites.karpolan.com" title={`Websites created by ${name}`}>
                   Websites
                 </a>
               </li>
-              <li className="">
-                <a href="https://services.karpolan.com" title={`Services created by ${name}`}>
-                  Services
+              <li>
+                <a href="https://karpolan.com" title="Personal WebSite">
+                  Personal
                 </a>
               </li>
             </ul>
@@ -36,7 +36,7 @@ const Footer = (props) => {
 
           {/* <div className={`col-md-2 ${classShowHideMd}`}>
             <ul className="list-unstyled">
-              <li className="">
+              <li >
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Footer = (props) => {
                   Devices
                 </a>
               </li>
-              <li className="">
+              <li >
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -56,7 +56,7 @@ const Footer = (props) => {
                   Things
                 </a>
               </li>
-              <li className="">
+              <li >
                 <a target="_blank" rel="noopener noreferrer" href="https://karpolan.com" title={`Invetions by ${name}`}>
                   Inventions
                 </a>
@@ -66,7 +66,7 @@ const Footer = (props) => {
 
           <div className={`col-md-3 ${classShowHideMd}`}>
             <ul className="list-unstyled">
-              <li className="">
+              <li>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -76,7 +76,7 @@ const Footer = (props) => {
                   Books
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -86,7 +86,7 @@ const Footer = (props) => {
                   Articles
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a target="_blank" rel="noopener noreferrer" href="https://blog.karpolan.com" title={`Blog by ${name}`}>
                   Blog
                 </a>
