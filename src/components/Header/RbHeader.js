@@ -12,7 +12,7 @@ const rbHeader = ({ className }) => {
   // Todo: Make collapse when click on the Brand too.
   return (
     <header className={`header ${className}`}>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="px-3">
         <Navbar.Brand as={Link} to="/">
           Software by KARPOLAN
         </Navbar.Brand>

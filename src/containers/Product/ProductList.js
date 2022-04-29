@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { CardColumns } from 'react-bootstrap';
 import { ProductCard, Spinner } from '../../components';
 import { Data } from '../../storage';
 
@@ -40,7 +39,7 @@ class ProductList extends Component {
     const { className } = this.props;
 
     // Redirect to NotFound if the data loading have been failed
-    if (error === true) return <Redirect to="/404" />;
+    if (error === true) return <Navigate to="/404" />;
 
     // Show only the Spinner if data was not loaded yet
     if (loaded === false) return <Spinner />;
@@ -77,7 +76,9 @@ class ProductList extends Component {
         </Helmet>
         <main>
           <article className={`product-list ${className}`}>
-            <CardColumns>{renderCards(data)}</CardColumns>
+            <div className="d-flex flex-row flex-wrap justify-content-center _align-items-center">
+              {renderCards(data)}
+            </div>
           </article>
         </main>
       </>

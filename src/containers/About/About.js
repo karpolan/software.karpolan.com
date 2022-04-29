@@ -52,19 +52,19 @@ class About extends Component {
 
                 <section className="contacts">
                   <p>
-                    <i className="far fa-calendar fa-2x mr-3 align-middle" />
+                    <i className="far fa-calendar fa-2x me-3 align-middle" />
                     <time className="align-middle" dateTime="1977-04-23 02:15">
                       April 23, 1977
                     </time>
                   </p>
                   <p>
-                    <i className="fas fa-phone fa-2x mr-3 align-middle" />
+                    <i className="fas fa-phone fa-2x me-3 align-middle" />
                     <a className="align-middle" rel="noopener noreferrer" href={`tel:${phone}`}>
                       {phone}
                     </a>
                   </p>
                   <p>
-                    <i className="far fa-envelope fa-2x mr-3 align-middle" />
+                    <i className="far fa-envelope fa-2x me-3 align-middle" />
                     <a
                       className="align-middle"
                       target="_blank"
@@ -75,7 +75,7 @@ class About extends Component {
                     </a>
                   </p>
                   <div>
-                    <i className="fas fa-home fa-2x mr-3 align-middle" />
+                    <i className="fas fa-home fa-2x me-3 align-middle" />
                     <address className="d-inline">{address}</address>
                     <p />
                   </div>
