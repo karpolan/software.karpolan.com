@@ -18,38 +18,37 @@
     "url": "https://github.com/karpolan/software.karpolan.com"
   },
   "scripts": {
-    "start": "react-scripts start",
     "dev": "npm start",
+    "prod": "npm run update-data && cross-env NODE_ENV=production npm run build",
+    "product": "npm run prod",
+    "start": "react-scripts start",
     "prebuild": "npm run update-data",
     "build": "cross-env NODE_ENV=production react-scripts build",
     "postbuild": "react-snap",
     "static": "react-snap",
     "build-static": "cross-env NODE_ENV=production react-scripts build && react-snap",
     "update-data": "cd ./public/data/ && node combine.js && cd ../../",
-    "product": "npm run update-data && cross-env NODE_ENV=production npm run build",
     "format": "prettier ./src --write",
     "format:all": "prettier . --write",
     "lint": "eslint ./src --ext .js,.jsx",
     "test": "react-scripts test"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.0",
-    "bootstrap": "^4.6.2",
+    "@fortawesome/fontawesome-free": "latest",
+    "bootstrap": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-bootstrap": "^1.6.6",
+    "react-bootstrap": "latest",
     "react-dom": "latest",
     "react-helmet": "latest",
-    "react-router-dom": "^5.3.4",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "web-vitals": "latest"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
     "cross-env": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
@@ -58,6 +57,18 @@
     "eslint-plugin-react": "latest",
     "glob": "latest",
     "prettier": "latest",
-    "react-snap": "^0.2.0"
+    "react-snap": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

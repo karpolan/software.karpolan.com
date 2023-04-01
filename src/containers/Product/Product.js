@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { Navigate, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { ProductDetails, Spinner } from '../../components';
