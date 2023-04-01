@@ -1,7 +1,6 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 import { hydrate, render } from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 import * as serviceWorker from './serviceWorker';
@@ -14,12 +13,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './social-colors.css';
 
 const App = (
-  <Router>
-    <Header />
-    <Content>
-      <DefaultRouter />
-    </Content>
-    <Footer />
+  <BrowserRouter>
     {/* !!! Don't use any <link rel="shortcut icon"... here, it disallow changing of favicons for products !!! */}
     <Helmet>
       <link rel="manifest" href="/site.webmanifest" />
@@ -47,7 +41,13 @@ const App = (
         });
       `}</script> */}
     </Helmet>
-  </Router>
+
+    <Header />
+    <Content>
+      <DefaultRouter />
+    </Content>
+    <Footer />
+  </BrowserRouter>
 );
 
 // was: ReactDOM.render(App, document.getElementById('root'));

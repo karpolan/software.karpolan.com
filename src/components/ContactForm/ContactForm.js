@@ -7,12 +7,6 @@ import './ContactForm.css';
  * Contact Form. Injects 3rd party scripts and can send email.
  */
 class ContactForm extends Component {
-  static propTypes = {
-    name: PropTypes.string,
-    email: PropTypes.string,
-    message: PropTypes.string,
-  };
-
   static defaultProps = {
     name: '',
     email: '',
@@ -50,7 +44,7 @@ class ContactForm extends Component {
   };
 
   /**
-   * Adds requered integration scripts into <head> and/or <body>. Better used it in componentDidMount().
+   * Adds required integration scripts into <head> and/or <body>. Better used it in componentDidMount().
    */
   addIntgrationScripts() {
     const script1 = document.createElement('script');
@@ -84,7 +78,7 @@ class ContactForm extends Component {
         message,
       })
       .then(() => {
-        console.log('sendContactEmail() succesful');
+        console.log('sendContactEmail() successful');
         this.setState({
           emailSent: true,
           message: '',
@@ -109,5 +103,11 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  name: PropTypes.string,
+  email: PropTypes.string,
+  message: PropTypes.string,
+};
 
 export default ContactForm;

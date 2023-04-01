@@ -7,10 +7,6 @@ import { SocialList, ContactForm } from '../../components';
  * Renders Contact view with Form and social links at "/contact/" url.
  */
 class Contact extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
-
   static defaultProps = {
     className: '',
   };
@@ -19,6 +15,14 @@ class Contact extends Component {
     const { className } = this.props;
     return (
       <>
+        <Helmet>
+          <title>Contact Software Engineer</title>
+          <meta
+            name="description"
+            content="Contact Anton Karpenko (aka KARPOLAN) about software development, software production, or software projects listed on this site."
+          />
+          <link rel="shortcut icon" href="/favicon.ico" />
+        </Helmet>
         <main>
           <div className={`row contact contact-info ${className}`}>
             <div className="col-12">
@@ -52,17 +56,13 @@ class Contact extends Component {
             </div>
           </div>
         </article>
-        <Helmet>
-          <title>Contact Software Engineer</title>
-          <meta
-            name="description"
-            content="Contact Anton Karpenko (aka KARPOLAN) about software development, software production, or software projects listed on this site."
-          />
-          <link rel="shortcut icon" href="/favicon.ico" />
-        </Helmet>
       </>
     );
   }
 }
+
+Contact.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Contact;

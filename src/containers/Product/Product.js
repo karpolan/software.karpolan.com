@@ -9,10 +9,6 @@ import { Data } from '../../storage';
  * Renders Single Product page using data from "scheme.json" file in `/data/${id}/` folder.
  */
 class Product extends Component {
-  static propTypes = {
-    className: PropTypes.string,
-  };
-
   static defaultProps = {
     className: '',
   };
@@ -36,6 +32,7 @@ class Product extends Component {
   /**
    * Returns icon resource depending on data props
    */
+  // TODO: Refactor ro use shared utility function for Product and ProductList
   getIcon() {
     const { data } = this.state;
     let result = data.logo; // Try to use "logo" property
@@ -80,20 +77,26 @@ class Product extends Component {
     };
 
     return (
-      <main>
-        <article className={`product ${className}`}>
-          <ProductDetails {...propsToRender} />
-        </article>
-        <script type="application/ld+json">{JSON.stringify(data)}</script>
+      <>
         <Helmet>
           <title>{propsToRender.name} - Software by KARPOLAN</title>
           <meta name="description" content={`${propsToRender.name} - ${propsToRender.description}`} />
           <meta name="author" content="Anton Karpenko" />
           <link rel="shortcut icon" href={propsToRender.icon} />
         </Helmet>
-      </main>
+        <main>
+          <article className={`product ${className}`}>
+            <ProductDetails {...propsToRender} />
+          </article>
+          <script type="application/ld+json">{JSON.stringify(data)}</script>
+        </main>
+      </>
     );
   }
 }
+
+Product.propTypes = {
+  className: PropTypes.string,
+};
 
 export default Product;
