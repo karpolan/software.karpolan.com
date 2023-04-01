@@ -7,12 +7,6 @@ import './ContactForm.css';
  * Contact Form. Injects 3rd party scripts and can send email.
  */
 class ContactForm extends Component {
-  static defaultProps = {
-    name: '',
-    email: '',
-    message: '',
-  };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -108,6 +102,12 @@ ContactForm.propTypes = {
   name: PropTypes.string,
   email: PropTypes.string,
   message: PropTypes.string,
+};
+
+ContactForm.defaultProps = {
+  name: '',
+  email: '',
+  message: '',
 };
 
 export default ContactForm;

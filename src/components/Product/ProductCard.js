@@ -11,24 +11,22 @@ const ProductCard = (props) => {
   const content = description; // + ` ${text}`;
 
   return (
-    <>
-      <Card className="product-card">
-        <Card.Body>
-          <Card.Title>
-            <Link to={link}>{name}</Link>
-          </Card.Title>
-          <Card.Text>
-            <Link to={link}>
-              <Image className="product-icon" src={icon} alt={name} />
-            </Link>
-            {content}
-            <Link className="product-button" to={link}>
-              <Button variant="outline-primary">Details</Button>
-            </Link>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </>
+    <Card className="product-card">
+      <Card.Body>
+        <Card.Title>
+          <Link to={link}>{name}</Link>
+        </Card.Title>
+        <Card.Text>
+          <Link to={link}>
+            <Image className="product-icon" src={icon} alt={name} />
+          </Link>
+          {content}
+          <Link className="product-button" to={link}>
+            <Button variant="outline-primary">Details</Button>
+          </Link>
+        </Card.Text>
+      </Card.Body>
+    </Card>
   );
 };
 

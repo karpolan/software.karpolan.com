@@ -13,7 +13,7 @@ const rbContactForm = (props) => {
     <Card>
       <Card.Body>
         <Form onSubmit={onFormSubmit}>
-          <Form.Group as={Row} controlId="formContact.inputName">
+          <Form.Group as={Row} controlId="formContact.inputName" className="mb-3">
             <Form.Label column md={3}>
               Name
             </Form.Label>
@@ -22,7 +22,7 @@ const rbContactForm = (props) => {
             </Col>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formContact.inputEmail">
+          <Form.Group as={Row} controlId="formContact.inputEmail" className="mb-3">
             <Form.Label column md={3}>
               E-mail
             </Form.Label>
@@ -38,7 +38,7 @@ const rbContactForm = (props) => {
             </Col>
           </Form.Group>
 
-          <Form.Group as={Row} controlId="formContact.inputMessage">
+          <Form.Group as={Row} controlId="formContact.inputMessage" className="mb-3">
             <Form.Label column md={3}>
               Message
             </Form.Label>
@@ -58,8 +58,8 @@ const rbContactForm = (props) => {
           {formSubmitted && <Spinner />}
           {emailSent && <Alert variant="success">Your message has been sent successfully</Alert>}
 
-          <div className="text-right">
-            <Button variant="outline-primary" _size="lg" type="submit">
+          <div className="text-end">
+            <Button variant="outline-primary" type="submit">
               Submit
             </Button>
           </div>

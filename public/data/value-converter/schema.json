@@ -11,7 +11,7 @@
   "mpn": "12",
   "sku": "vc2",
 
-  "url": "http://www.abf-soft.com/value-converter/",
+  "url": "https://www.abf-soft.com/value-converter.shtml",
   "logo": "/data/value-converter/icon-128x128.png",
   "image": [
     "/data/value-converter/screenshot-temperature.png",
@@ -42,7 +42,7 @@
     {
       "@type": "Offer",
       "name": "Buy",
-      "url": "http://www.abf-soft.com/value-converter/",
+      "url": "https://www.abf-soft.com/value-converter.shtml",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -55,7 +55,7 @@
     {
       "@type": "Offer",
       "name": "Download",
-      "url": "http://www.abf-soft.com/value-converter/",
+      "url": "https://www.abf-soft.com/value-converter.shtml",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -68,14 +68,14 @@
     {
       "@type": "Offer",
       "name": "Download for PC",
-      "url": "http://www.abf-soft.com/value-converter/data/abfValueConverterInstall.exe",
+      "url": "https://www.abf-soft.com/value-converter/data/abfValueConverterInstall.exe",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows",
-        "screenshot": "http://www.abf-soft.com/value-converter/images/screenshot.gif",
-        "downloadUrl": "http://www.abf-soft.com/value-converter/data/abfValueConverterInstall.exe",
-        "url": "http://www.abf-soft.com/value-converter/",
+        "screenshot": "https://www.abf-soft.com/value-converter/images/screenshot.gif",
+        "downloadUrl": "https://www.abf-soft.com/value-converter/data/abfValueConverterInstall.exe",
+        "url": "https://www.abf-soft.com/value-converter/",
         "name": "Value Converter for PC"
       },
       "availability": "OnlineOnly",

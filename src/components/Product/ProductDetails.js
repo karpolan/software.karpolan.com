@@ -6,7 +6,7 @@ import './Product.css';
 /**
  * Renders the Product Details "full page" using props as data
  */
-const ProuductDetails = (props) => {
+const ProductDetails = (props) => {
   const { name, icon, text, description, dates, images, offers } = props;
 
   /**
@@ -46,7 +46,7 @@ const ProuductDetails = (props) => {
     const list = offers.map((item, index) => {
       let openInNewWindowProps = {};
       if (item.url && item.url.includes('//')) {
-        // Open only extarnal links in New Window
+        // Open only external links in New Window
         openInNewWindowProps = {
           target: '_blank',
           rel: 'noopener noreferrer',
@@ -99,7 +99,7 @@ const ProuductDetails = (props) => {
   );
 };
 
-ProuductDetails.propTypes = {
+ProductDetails.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -109,11 +109,11 @@ ProuductDetails.propTypes = {
   offers: PropTypes.arrayOf(PropTypes.object),
 };
 
-ProuductDetails.defaultProps = {
+ProductDetails.defaultProps = {
   text: '',
   dates: null,
   images: null,
   offers: null,
 };
 
-export default ProuductDetails;
+export default ProductDetails;

@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { CardColumns } from 'react-bootstrap';
 import { ProductCard, Spinner } from '../../components';
 import { Data } from '../../storage';
 
@@ -10,15 +9,15 @@ import { Data } from '../../storage';
  * Renders list of all products from "/data/" folder
  */
 class ProductList extends Component {
-  static defaultProps = {
-    className: '',
-  };
+  constructor(props) {
+    super(props);
 
-  state = {
-    error: false,
-    loaded: false,
-    data: {},
-  };
+    this.state = {
+      error: false,
+      loaded: false,
+      data: {},
+    };
+  }
 
   componentDidMount() {
     // Load list of products form "/data/" folder into "data" state
@@ -41,7 +40,7 @@ class ProductList extends Component {
     const { className } = this.props;
 
     // Redirect to NotFound if the data loading have been failed
-    if (error === true) return <Redirect to="/404" />;
+    if (error === true) return <Navigate to="/404" />;
 
     // Show only the Spinner if data was not loaded yet
     if (loaded === false) return <Spinner />;
@@ -68,15 +67,19 @@ class ProductList extends Component {
           <title>Software Products by KARPOLAN</title>
           <meta
             name="description"
-            content="Products, projects, programs, tools, utilities and other software created by Anton Karpenko (aka KARPOLAN) personally or with his direct participation."
+            content={`Products, projects, programs, tools, utilities and other software created by 
+            Anton Karpenko (aka KARPOLAN) personally or with his direct participation.`}
           />
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+          <link rel="canonical" href="https://software.karpolan.com" />
         </Helmet>
         <main>
           <article className={`product-list ${className}`}>
-            <CardColumns>{renderCards(data)}</CardColumns>
+            <div className="d-flex flex-row flex-wrap justify-content-center _align-items-center">
+              {renderCards(data)}
+            </div>
           </article>
         </main>
       </>
@@ -86,6 +89,10 @@ class ProductList extends Component {
 
 ProductList.propTypes = {
   className: PropTypes.string,
+};
+
+ProductList.defaultProps = {
+  className: '',
 };
 
 export default ProductList;

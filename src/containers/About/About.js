@@ -8,14 +8,6 @@ import { SocialList } from '../../components';
  * Renders About view with photo, brief intro, contact information and social links at "/about/" url.
  */
 class About extends Component {
-  static defaultProps = {
-    className: '',
-    name: Consts.name, // 'Anton Karpenko';
-    email: Consts.email, // 'i@karpolan.com';
-    phone: Consts.phone, // '+421 919 321 977';
-    address: Consts.address, // 'Bratislava, SLOVAKIA';
-  };
-
   render() {
     const urlPicture = `${process.env.PUBLIC_URL}/img/about/`;
     const domain = window.location.hostname.toUpperCase();
@@ -27,9 +19,11 @@ class About extends Component {
           <title>About Software Engineer</title>
           <meta
             name="description"
-            content="Anton Karpenko (aka KARPOLAN) is software engineer since 1994, participated in creation of many different software products."
+            content={`Anton Karpenko (aka KARPOLAN) is software engineer since 1994, 
+              participated in creation of many different software products.`}
           />
           <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="canonical" href="https://software.karpolan.com/about/index.html" />
         </Helmet>
 
         <main>
@@ -58,19 +52,19 @@ class About extends Component {
 
                 <section className="contacts">
                   <p>
-                    <i className="far fa-calendar fa-2x mr-3 align-middle" />
+                    <i className="far fa-calendar fa-2x me-3 align-middle" />
                     <time className="align-middle" dateTime="1977-04-23 02:15">
                       April 23, 1977
                     </time>
                   </p>
                   <p>
-                    <i className="fas fa-phone fa-2x mr-3 align-middle" />
+                    <i className="fas fa-phone fa-2x me-3 align-middle" />
                     <a className="align-middle" rel="noopener noreferrer" href={`tel:${phone}`}>
                       {phone}
                     </a>
                   </p>
                   <p>
-                    <i className="far fa-envelope fa-2x mr-3 align-middle" />
+                    <i className="far fa-envelope fa-2x me-3 align-middle" />
                     <a
                       className="align-middle"
                       target="_blank"
@@ -81,7 +75,7 @@ class About extends Component {
                     </a>
                   </p>
                   <div>
-                    <i className="fas fa-home fa-2x mr-3 align-middle" />
+                    <i className="fas fa-home fa-2x me-3 align-middle" />
                     <address className="d-inline">{address}</address>
                     <p />
                   </div>
@@ -179,6 +173,14 @@ About.propTypes = {
   email: PropTypes.string,
   phone: PropTypes.string,
   address: PropTypes.string,
+};
+
+About.defaultProps = {
+  className: '',
+  name: Consts.name, // 'Anton Karpenko';
+  email: Consts.email, // 'i@karpolan.com';
+  phone: Consts.phone, // '+421 919 321 977';
+  address: Consts.address, // 'Nivy, Ružinov, Bratislava, SLOVAKIA';
 };
 
 export default About;
