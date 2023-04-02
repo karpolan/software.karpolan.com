@@ -42,7 +42,7 @@ class About extends Component {
 
             <div className="col-md-6">
               <div className="offset-md-1">
-                <h6 className="d-none d-md-block">Hello everybody, I am</h6>
+                <h6 className="d-none d-md-block">Hello every, I am</h6>
                 <h3>{name}</h3>
                 <h4>Software Engineer</h4>
                 <p>

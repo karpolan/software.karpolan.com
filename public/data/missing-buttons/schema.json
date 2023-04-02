@@ -7,19 +7,19 @@
   "slogan": "Software combines many useful but hidden actions of Windows system and PC hardware in a single place.",
   "description": "You can turn off monitor, hibernate the system, start screensaver immediately, and so on. Also you can simulate missing keyboard buttons (Num Lock, Print Screen, etc.) and even key combinations such as Ctrl+Alt+Del, Ctrl+Shift+Esc, and so on.",
 
-  "url": "https://missing-buttons.com",
-  "logo": "https://missing-buttons.com/images/icon-128x128.png",
+  "url": "/missing-buttons/",
+  "logo": "/data/missing-buttons/icon-128x128.png",
   "image": [
-    "https://missing-buttons.com/images/icon-256x256.png",
-    "https://missing-buttons.com/images/screenshot-400x600.png",
-    "https://missing-buttons.com/images/screenshot.png"
+    "/data/missing-buttons/icon-256x256.png",
+    "/data/missing-buttons/screenshot-400x600.png",
+    "/data/missing-buttons/screenshot.png"
   ],
   "category": "Software",
   "mpn": "4",
   "sku": "mb1x",
 
   "productionDate": "2013",
-  "releaseDate": "",
+  "releaseDate": "2023",
 
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -38,11 +38,11 @@
     {
       "@type": "Offer",
       "name": "Buy",
-      "url": "https://missing-buttons.com/buy/",
+      "url": "/missing-buttons/",
       "seller": {
         "@type": "Organization",
-        "url": "https://missing-buttons.com",
-        "name": "Missing Buttons"
+        "url": "https://karpolan.com",
+        "name": "KARPOLAN"
       },
       "availability": "OnlineOnly",
       "priceCurrency": "USD",
@@ -50,28 +50,15 @@
     },
     {
       "@type": "Offer",
-      "name": "Download",
-      "url": "https://missing-buttons.com/download/",
-      "seller": {
-        "@type": "Organization",
-        "url": "https://missing-buttons.com",
-        "name": "Missing Buttons"
-      },
-      "availability": "OnlineOnly",
-      "priceCurrency": "USD",
-      "price": "0"
-    },
-    {
-      "@type": "Offer",
       "name": "Download for PC",
-      "url": "https://missing-buttons.com/files/missing-buttons.exe",
+      "url": "/data/missing-buttons/files/missing-buttons.exe",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows",
-        "screenshot": "https://missing-buttons.com/images/screenshot.png",
-        "downloadUrl": "https://missing-buttons.com/files/missing-buttons.exe",
-        "url": "https://missing-buttons.com",
+        "screenshot": "/data/missing-buttons/files/screenshot.png",
+        "downloadUrl": "/data/missing-buttons/files/missing-buttons.exe",
+        "url": "/missing-buttons/",
         "name": "Missing Buttons for PC"
       },
       "availability": "OnlineOnly",

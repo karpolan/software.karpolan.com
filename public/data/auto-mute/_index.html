@@ -14,22 +14,22 @@
     <script type="text/javascript">
       function loadJsonFile(fileName = './schema.json') {
         return fetch(fileName, { credentials: 'same-origin' })
-          .then(function(response) {
+          .then(function (response) {
             if (!response.ok) {
               throw new Error('HTTP error ' + response.status);
             }
             return response.json();
           })
-          .then(function(json) {
+          .then(function (json) {
             return json;
           })
-          .catch(function(error) {
+          .catch(function (error) {
             console.error('loadJsonFile(%s) failed, Error: %s', fileName, error.message);
             return null;
           });
       } // loadJsonFile()
 
-      loadJsonFile('./schema.json').then(function(json) {
+      loadJsonFile('./schema.json').then(function (json) {
         console.log('JSON:', json);
         if (json) {
           // Add <script type="application/ld+json"> with json data

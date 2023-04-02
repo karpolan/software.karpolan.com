@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -27,6 +27,7 @@ class ProductList extends Component {
   /**
    * Returns icon resource depending on schema props
    */
+  // TODO: Refactor ro use shared utility function for Product and ProductList
   getIcon = (schema) => {
     let result = schema.logo; // Try to use "logo" property
     if (!result) result = schema.image; // If "logo" property is empty, use "image" property

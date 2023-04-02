@@ -5,7 +5,7 @@ import { Product, ProductList, NotFound, Contact, About } from '../containers';
 /**
  * Default Router of application
  */
-const Router = () => (
+const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<ProductList />} />
     <Route path="/index.html" element={<ProductList />} />
@@ -25,4 +25,4 @@ const Router = () => (
   </Routes>
 );
 
-export default Router;
+export default AppRoutes;

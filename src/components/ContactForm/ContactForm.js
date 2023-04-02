@@ -38,7 +38,7 @@ class ContactForm extends Component {
   };
 
   /**
-   * Adds requered integration scripts into <head> and/or <body>. Better used it in componentDidMount().
+   * Adds required integration scripts into <head> and/or <body>. Better used it in componentDidMount().
    */
   addIntgrationScripts() {
     const script1 = document.createElement('script');

@@ -2,7 +2,6 @@
 
 Web application for list of [software products](http://software.karpolan.com) created by Anton Karpenko aka [KARPOLAN](http://karpolan.com).
 
-
 ## Available Scripts
 
 In the project directory, you can run:
