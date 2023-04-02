@@ -37,19 +37,6 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Buy",
-      "url": "/missing-buttons/",
-      "seller": {
-        "@type": "Organization",
-        "url": "https://karpolan.com",
-        "name": "KARPOLAN"
-      },
-      "availability": "OnlineOnly",
-      "priceCurrency": "USD",
-      "price": "9.95"
-    },
-    {
-      "@type": "Offer",
       "name": "Download for PC",
       "url": "/data/missing-buttons/files/missing-buttons.exe",
       "itemOffered": {

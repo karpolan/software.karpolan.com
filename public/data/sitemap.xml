@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://software.karpolan.com/data/index.html</loc><priority>0.6</priority></url>
-<url><loc>https://software.karpolan.com/data/value-converter/index.html</loc><priority>0.7</priority></url>
 <url><loc>https://software.karpolan.com/data/touchpad-blocker/index.html</loc><priority>0.7</priority></url>
-<url><loc>https://software.karpolan.com/data/scroll-lock-indicator/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/value-converter/index.html</loc><priority>0.7</priority></url>
 <url><loc>https://software.karpolan.com/data/sea-battle/index.html</loc><priority>0.7</priority></url>
 <url><loc>https://software.karpolan.com/data/remote-desktop-control/index.html</loc><priority>0.7</priority></url>
+<url><loc>https://software.karpolan.com/data/scroll-lock-indicator/index.html</loc><priority>0.7</priority></url>
 <url><loc>https://software.karpolan.com/data/outlook-express-backup/index.html</loc><priority>0.7</priority></url>
 <url><loc>https://software.karpolan.com/data/outlook-backup/index.html</loc><priority>0.7</priority></url>
 <url><loc>https://software.karpolan.com/data/ochepyatka/index.html</loc><priority>0.7</priority></url>

@@ -7,16 +7,20 @@
   "slogan": "It helps to fix incorrectly typed text in another language or when Caps Lock was turned on.",
   "description": "Using Ochepyatka you can convert text between different keyboard layouts within a second! Just select an incorrect text fragment and press appropriate keyboard shortcut - the program will make some magic and fix your text immediately! Ochepytka can convert: \"hELLO wORLD\" into \"Hello World\". Cool, isn't it?",
 
-  "url": "https://ochepyatka.com",
-  "logo": "https://ochepyatka.com/images/icon-128x128.png",
-  "image": ["https://ochepyatka.com/images/icon-256x256.png", "https://ochepyatka.com/images/screenshot.png"],
+  "url": "/ochepyatka/",
+  "logo": "/data/ochepyatka/icon-128x128.png",
+  "image": [
+    "/data/ochepyatka/icon-256x256.png",
+    "/data/ochepyatka/screenshot.png",
+    "/data/ochepyatka/screenshot-rus.png"
+  ],
 
   "category": "Software",
   "mpn": "6",
   "sku": "ocp1x",
 
   "productionDate": "2011",
-  "releaseDate": "",
+  "releaseDate": "2021",
 
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -34,28 +38,15 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Download",
-      "url": "https://ochepyatka.com/download/",
-      "seller": {
-        "@type": "Organization",
-        "url": "https://ochepyatka.com",
-        "name": "OCHEPYATKA.COM"
-      },
-      "availability": "OnlineOnly",
-      "priceCurrency": "USD",
-      "price": "0"
-    },
-    {
-      "@type": "Offer",
       "name": "Download for PC",
-      "url": "https://ochepyatka.com/files/ochepyatka-setup.exe",
+      "url": "/data/ochepyatka/files/ochepyatka-setup.exe",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows",
-        "screenshot": "https://ochepyatka.com/images/screenshot.png",
-        "downloadUrl": "https://ochepyatka.com/files/ochepyatka-setup.exe",
-        "url": "https://ochepyatka.com",
+        "screenshot": "/data/ochepyatka/screenshot.png",
+        "downloadUrl": "/data/ochepyatka/files/ochepyatka-setup.exe",
+        "url": "/ochepyatka",
         "name": "oChePyaTka for PC"
       },
       "availability": "OnlineOnly",
