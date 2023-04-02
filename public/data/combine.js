@@ -19,7 +19,7 @@ const capitalizeString = (s) => {
 async function makeAllJsonInRootAndIndexHtmlInFolders() {
   try {
     const matchingPattern = `${__dirname}/**/schema.json`;
-    console.log(`matchingPattern: ${matchingPattern}`);
+    // console.log(`matchingPattern: ${matchingPattern}`);
     const matchingFiles = await glob(matchingPattern);
 
     const allObjects = [];
@@ -130,7 +130,7 @@ ${htmlDataItems.join('\n')}
     } catch (error) {
       console.error('Writing File error:', error);
     }
-    console.log('HTML links to all sub-folders added into "index.html" file');
+    console.log('HTML links to all sub-folders added into "/data/index.html" file');
 
     // Create Data Sitemap "/data/sitemap.xml"
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
