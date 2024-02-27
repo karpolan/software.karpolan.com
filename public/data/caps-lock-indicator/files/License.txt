@@ -1,0 +1,61 @@
+This is the End User License Agreement (the "Agreement") is a legal agreement between you, the end-user ("Licensee"), and KARPOLAN, the manufacturer and the copyright owner ("Owner"), for the use of the "Caps Lock Indicator" aka "CapsLock Indicator" aka "CapsLock Info" software product ("Software"). 
+
+By using this Software or storing this program on a computer drive (or other media), you are agreeing to be bound by the terms of this Agreement. If you do not agree with the terms of this Agreement, please remove this Software from your system. 
+
+This Software is not free. However, you may install an Evaluation Version of this Software to test and evaluate the application during the Trial Period. If the program meets your requirements, and you wish to continue using the Software, after the Trial Period has ended, you have to purchase the Registered Version. If you do not want to continue using Software after the Trial Period, please remove this Software from your system. 
+
+You accept responsibility for any network usage costs or any other costs, incurred by using this Software. 
+
+
+Rights
+======
+
+The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. Software is licensed, not sold. Software is free to use and includes no technical support. The origin of this Software must not be misrepresented.
+
+
+Copyright
+=========
+
+All title, including but not limited to copyrights, in and to the Software and any copies thereof are owned by Owner or its suppliers. All title and intellectual property rights in and to the content which may be accessed through use of the Software is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This Agreement grants you no rights to use such content. All rights not expressly granted are reserved by Owner.
+
+
+Trial Period
+============
+
+There is a free 30 days Trial Period for this Software. 
+
+
+Evaluation Version
+==================
+
+The Evaluation Version allows you to test and evaluate characteristics, features, and quality of this Software. You can also test the compatibility of the Software with your hardware and your operating system. The Evaluation Version may have some restricted features or limitations. Using this Software after the Trial Period without registration violates copyright laws and may result in severe civil and criminal penalties. 
+
+
+Registered Version
+==================
+
+The Registered Version has no restricted features or limitations. Upon enabling the registered copy of this Software (one per each license), you can either choose to install the Software on one or more computers for your individual use, or install it on a single workstation, used consecutively by multiple users. However, you cannot do both. 
+
+
+Registration Key
+================
+
+The Registration Key may come as an unlock code, password, algorithm, or a service file. The Evaluation Version becomes Registered Version after the Registration Key has been applied. The Registration Key can be obtained directly from Owner or from its authorized dealer or representative only. You can only use the Registration Key that you own or have permissions to use, as an employee or member of a licensed group. You must not publicize or distribute the Registration Key (or a part of it) without the permission of Owner.
+
+
+Distribution
+============
+
+The Evaluation Version of this Software may be distributed freely through on-line services, bulletin boards, or other forms of electronic media, as long as the files are distributed in their entirety. Computer Magazines/Archives are authorized to distribute the Evaluation Version on any Cover Disk or CD-ROM without an individual permission. Please inform us using the contact form or via e-mail each time you distribute the evaluation copy. 
+
+
+Restrictions
+============
+
+You may not alter this Software in any way, including changing or removing any messages or windows. You may not decompile, reverse engineer, disassemble or otherwise reduce this Software to a human perceivable form. You may not modify, rent or resell this Software for profit, or create any derivative works, based upon this Software. Publication or distributing of the Registration Key or some of its part is strictly prohibited! 
+
+
+Disclaimer
+==========
+
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND SUITABILITY FOR A PARTICULAR PURPOSE. THE PERSON USING THE SOFTWARE BEARS ALL RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE. OWNER WILL NOT BE LIABLE FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, INDIRECT OR SIMILAR DAMAGES DUE TO LOSS OF DATA OR ANY OTHER REASON, EVEN IF OWNER OR AN AGENT OF OWNER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN NO EVENT WILL OWNER BE LIABLE FOR COSTS OF ANY DAMAGES, EXCEEDING THE PRICE PAID FOR THE SOFTWARE LICENSE, REGARDLESS OF THE FORM OF THE CLAIM. YOU ACKNOWLEDGE THAT YOU HAVE READ THIS LICENSE, UNDERSTOOD IT, AND AGREED TO BE BOUND BY ITS TERMS.

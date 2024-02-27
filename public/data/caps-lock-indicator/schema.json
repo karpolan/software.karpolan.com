@@ -11,15 +11,15 @@
   "mpn": "2",
   "sku": "cli1x",
 
-  "url": "https://caps-lock-indicator.com",
-  "logo": "https://caps-lock-indicator.com/images/icon-128x128.png",
+  "url": "/caps-lock-indicator",
+  "logo": "/data/caps-lock-indicator/icon-128x128.png",
   "image": [
-    "https://caps-lock-indicator.com/images/icon-256x256.png",
-    "https://caps-lock-indicator.com/images/screenshot.png"
+    "/data/caps-lock-indicator/icon-256x256.png",
+    "/data/caps-lock-indicator/screenshot.png"
   ],
 
   "productionDate": "2012",
-  "releaseDate": "",
+  "releaseDate": "2024",
 
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -37,41 +37,15 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Buy",
-      "url": "https://caps-lock-indicator.com/buy/",
-      "seller": {
-        "@type": "Organization",
-        "url": "https://caps-lock-indicator.com",
-        "name": "Caps Lock Indicator"
-      },
-      "availability": "OnlineOnly",
-      "priceCurrency": "USD",
-      "price": "9.95"
-    },
-    {
-      "@type": "Offer",
-      "name": "Download",
-      "url": "https://caps-lock-indicator.com/download/",
-      "seller": {
-        "@type": "Organization",
-        "url": "https://caps-lock-indicator.com",
-        "name": "Caps Lock Indicator"
-      },
-      "availability": "OnlineOnly",
-      "priceCurrency": "USD",
-      "price": "0"
-    },
-    {
-      "@type": "Offer",
       "name": "Download for PC",
-      "url": "https://caps-lock-indicator.com/files/caps-lock-indicator.exe",
+      "url": "/data/caps-lock-indicator/files/caps-lock-indicator.exe",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows",
-        "screenshot": "https://caps-lock-indicator.com/images/screenshot.png",
-        "downloadUrl": "https://caps-lock-indicator.com/files/caps-lock-indicator.exe",
-        "url": "https://caps-lock-indicator.com",
+        "screenshot": "/data/caps-lock-indicator/screenshot.png",
+        "downloadUrl": "/data/caps-lock-indicator/files/caps-lock-indicator.exe",
+        "url": "/caps-lock-indicator",
         "name": "Caps Lock Indicator for PC"
       },
       "availability": "OnlineOnly",
