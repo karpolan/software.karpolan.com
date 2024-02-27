@@ -1,12 +1,12 @@
 /**
  * Combines "schema.json" files from all subfolders into singe "all.json" files as array of objects
  */
-const glob = require('glob');
+const { glob } = require('glob');
 const fs = require('fs');
 
 /**
  * Returns capitalized version (Upper first char for every word) of the given string
- * @param {String} s - String To Capitalize
+ * @param {string} s - String To Capitalize
  */
 const capitalizeString = (s) => {
   // return s.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
