@@ -11,7 +11,8 @@
   "mpn": "14",
   "sku": "ob2",
 
-  "url": "https://www.abf-soft.com/outlook-backup.shtml",
+  "_url": "https://www.abf-soft.com/outlook-backup.shtml",
+  "url": "/outlook-backup/",
   "logo": "/data/outlook-backup/icon-128x128.png",
   "image": [
     "/data/outlook-backup/reminder.gif",
@@ -42,7 +43,8 @@
     {
       "@type": "Offer",
       "name": "Buy",
-      "url": "https://www.abf-soft.com/outlook-backup.shtml",
+      "_url": "https://www.abf-soft.com/outlook-backup.shtml",
+      "url": "/outlook-backup/",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -55,7 +57,8 @@
     {
       "@type": "Offer",
       "name": "Download",
-      "url": "https://www.abf-soft.com/outlook-backup.shtml",
+      "_url": "https://www.abf-soft.com/outlook-backup.shtml",
+      "url": "/outlook-backup/",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -68,7 +71,8 @@
     {
       "@type": "Offer",
       "name": "Download for PC",
-      "url": "https://www.abf-soft.com/outlook-backup/data/abfOB4Install.exe",
+      "_url": "https://www.abf-soft.com/outlook-backup/data/abfOB4Install.exe",
+      "url": "/outlook-backup/",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",
