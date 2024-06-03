@@ -14,7 +14,7 @@
   "productionDate": "1995",
   "releaseDate": "1997",
 
-  "url": "/aobmen/",
+  "url": "/aobmen/index.html",
   "logo": "/data/aobmen/icon-128x128.png",
   "image": ["/data/aobmen/icon-256x256.png", "/data/aobmen/screenshot.png"],
 
@@ -35,10 +35,10 @@
     {
       "@type": "Offer",
       "name": "Download",
-      "url": "/aobmen/",
+      "url": "/aobmen/index.html",
       "seller": {
         "@type": "Organization",
-        "url": "/aobmen/",
+        "url": "/aobmen/index.html",
         "name": "AObmen"
       },
       "availability": "OnlineOnly"

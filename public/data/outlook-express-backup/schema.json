@@ -12,7 +12,7 @@
   "sku": "oeb2",
 
   "_url": "https://www.abf-soft.com/outlook-express-backup.shtml",
-  "url": "/outlook-express-backup/",
+  "url": "/outlook-express-backup/index.html",
   "logo": "/data/outlook-express-backup/icon-128x128.png",
   "image": [
     "/data/outlook-express-backup/reminder.gif",
@@ -46,7 +46,7 @@
       "@type": "Offer",
       "name": "Buy",
       "_url": "https://www.abf-soft.com/outlook-express-backup.shtml",
-      "url": "/outlook-express-backup/",
+      "url": "/outlook-express-backup/index.html",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -60,7 +60,7 @@
       "@type": "Offer",
       "name": "Download",
       "_url": "https://www.abf-soft.com/outlook-express-backup.shtml",
-      "url": "/outlook-express-backup/",
+      "url": "/outlook-express-backup/index.html",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -74,7 +74,7 @@
       "@type": "Offer",
       "name": "Download for PC",
       "_url": "https://www.abf-soft.com/outlook-express-backup/data/abfOutlookExpressBackupInstall.exe",
-      "url": "/outlook-express-backup/",
+      "url": "/outlook-express-backup/index.html",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",

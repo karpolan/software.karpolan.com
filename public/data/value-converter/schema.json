@@ -12,7 +12,7 @@
   "sku": "vc2",
 
   "_url": "https://www.abf-soft.com/value-converter.shtml",
-  "url": "/value-converter/",
+  "url": "/value-converter/index.html",
   "logo": "/data/value-converter/icon-128x128.png",
   "image": [
     "/data/value-converter/screenshot-temperature.png",
@@ -44,7 +44,7 @@
       "@type": "Offer",
       "name": "Buy",
       "_url": "https://www.abf-soft.com/value-converter.shtml",
-      "url": "/value-converter/",
+      "url": "/value-converter/index.html",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -58,7 +58,7 @@
       "@type": "Offer",
       "name": "Download",
       "_url": "https://www.abf-soft.com/value-converter.shtml",
-      "url": "/value-converter/",
+      "url": "/value-converter/index.html",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -72,7 +72,7 @@
       "@type": "Offer",
       "name": "Download for PC",
       "_url": "https://www.abf-soft.com/value-converter/data/abfValueConverterInstall.exe",
-      "url": "/value-converter/",
+      "url": "/value-converter/index.html",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",

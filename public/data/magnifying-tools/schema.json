@@ -8,7 +8,7 @@
   "description": "A set of useful graphics tools for viewing the screen area in different zooms. Each tool has its own unique behavior and usability. All tools supplement each other and allow designers and people with poor eyesight to work with computers better.",
 
   "_url": "http://www.abf-soft.com/magnifying-tools.shtml",
-  "url": "/magnifying-tools/",
+  "url": "/magnifying-tools/index.html",
   "logo": "/data/magnifying-tools/icon.gif",
   "image": [
     "/data/magnifying-tools/eye.gif",
@@ -41,7 +41,7 @@
       "@type": "Offer",
       "name": "Buy",
       "_url": "http://www.abf-soft.com/magnifying-tools.shtml",
-      "url": "/magnifying-tools/",
+      "url": "/magnifying-tools/index.html",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -55,7 +55,7 @@
       "@type": "Offer",
       "name": "Download",
       "_url": "http://www.abf-soft.com/magnifying-tools.shtml",
-      "url": "/magnifying-tools/",
+      "url": "/magnifying-tools/index.html",
       "seller": {
         "@type": "Organization",
         "url": "http://www.abf-soft.com",
@@ -69,16 +69,16 @@
       "@type": "Offer",
       "name": "Download for PC",
       "_url": "https://www.abf-soft.com/magnifying-tools/data/abfMagnifyingToolsInstall.exe",
-      "url": "/magnifying-tools/",
+      "url": "/magnifying-tools/index.html",
       "itemOffered": {
         "@type": "SoftwareApplication",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Windows",
         "screenshot": "/data/magnifying-tools/magnifier.gif",
         "_downloadUrl": "https://www.abf-soft.com/magnifying-tools/data/abfMagnifyingToolsInstall.exe",
-        "downloadUrl": "/magnifying-tools/",
+        "downloadUrl": "/magnifying-tools/index.html",
         "_url": "http://www.abf-soft.com/magnifying-tools.shtml",
-        "url": "/magnifying-tools/",
+        "url": "/magnifying-tools/index.html",
         "name": "Magnifying Tools for PC"
       },
       "availability": "OnlineOnly",
