@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
 
-  "url": "/remote-desktop-control/",
+  "url": "/remote-desktop-control/index.html",
   "name": "Remote Desktop Control",
   "alternateName": "RDC",
   "slogan": "Remote Desktop Control was one of the best remote access software on the market. It is based on Anyplace Control technology. The product is discontinued for now.",
@@ -40,10 +40,10 @@
     {
       "@type": "Offer",
       "name": "Buy",
-      "url": "/remote-desktop-control/",
+      "url": "/remote-desktop-control/index.html",
       "seller": {
         "@type": "Organization",
-        "url": "/remote-desktop-control/",
+        "url": "/remote-desktop-control/index.html",
         "name": "Remote Desktop Control"
       },
       "availability": "OnlineOnly",
@@ -53,10 +53,10 @@
     {
       "@type": "Offer",
       "name": "Download",
-      "url": "/remote-desktop-control/",
+      "url": "/remote-desktop-control/index.html",
       "seller": {
         "@type": "Organization",
-        "url": "/remote-desktop-control/",
+        "url": "/remote-desktop-control/index.html",
         "name": "Remote Desktop Control"
       },
       "availability": "OnlineOnly"

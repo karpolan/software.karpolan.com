@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <>
       <Helmet>
-        <title>Error - Page not found or data incorrect</title>
+        <title>Error 404 - Page not found or data incorrect</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Helmet>
       <main>
@@ -24,7 +24,7 @@ const NotFound = () => {
                   <span className="glyphicon glyphicon-home" />
                   <span>Take Me Home</span>
                 </Link>
-                <Link className="btn btn-outline-secondary" to="/contact/">
+                <Link className="btn btn-outline-secondary" to="/contact/index.html">
                   <span className="glyphicon glyphicon-envelope" />
                   <span>Contact Support</span>
                 </Link>
